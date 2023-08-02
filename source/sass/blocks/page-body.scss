@@ -1,0 +1,18 @@
+.page-body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 100%;
+  background-position: top center;
+  color: $basic_dark;
+  overflow-x: hidden;
+
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}

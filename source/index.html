@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <!-- <link rel="preload" href="./fonts/jost-extrabold.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/jost-extrabold.woff2" as="font" type="font/woff2"crossorigin="anonymous">
+    <link rel="preload" href="./fonts/jost-regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/jost-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
+    <title>Rx4Route</title>
+  </head>
+  <body class="page-body">
+    <header class="page-header">
+      <a class="page-header__logo-link">
+          <img class="page-header__logo" src="./img/logo.svg" alt="Logotype Rx4Route">
+      </a>
+      <div class="page-header__toggle-container">
+        <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню навигации">Бургер</button>
+      </div>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="#about" class="menu__link">About us</a>
+          </li>
+          <li class="menu__item">
+            <a href="#service" class="menu__link">Service features</a>
+          </li>
+          <li class="menu__item">
+            <a href="#features" class="menu__link">Features</a>
+          </li>
+          <li class="menu__item">
+            <a href="#contacts" class="menu__link">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="page-header__button" type="button">Get Quote</button>
+    </header>
+    <main class="page-main">
+      <h1 class="visually-hidden">Site Rx4Route</h1>
+      <section class="promo">
+        <h2 class="title visually-hidden">Promo block</h2>
+        <p class="promo__main-text">Expand your pharmacy with Rx4Route</p>
+        <p class="promo__text">Our platform is designed to streamline your business operations, saving you time and money.</p>
+        <button class="promo__button" type="button">Get Quote</button>
+      </section>
+      <div class="promo__img-container">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/promo-img-desk.webp 1x, ./img/promo-img-desk@2x.webp 2x">
+          <!-- <source type="image/webp" media="(min-width: 768px)" srcset="img/.webp 1x, ./img/.webp 2x"> -->
+          <source type="image/webp" srcset="img/promo-img-mobile.webp 1x, ./img/promo-img-mobile@2x.webp 2x">
+          <source media="(min-width: 1440px)" srcset="./img/promo-img-desk.jpg 1x, ./img/promo-img-desk@2x.jpg 2x">
+          <!-- <source media="(min-width: 768px)" srcset="./img/ 1x, ./img/ 2x"> -->
+          <img class="promo__img" src="./img/promo-img-mobile.jpg" srcset="./img/promo-img-mobile@2x.jpg 2x" alt="">
+        </picture>
+      </div>
+    </main>
+    <footer class="page-footer">
+
+    </footer>
+  </body>
+</html>
