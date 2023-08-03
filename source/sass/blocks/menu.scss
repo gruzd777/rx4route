@@ -1,0 +1,22 @@
+.menu {
+
+}
+
+.menu__list {
+  margin: 0 0 32px 0;
+}
+
+.menu__item {
+  margin: 0 0 32px 0;
+}
+
+.menu__link {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  color: $basic_dark;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

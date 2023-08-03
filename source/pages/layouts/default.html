@@ -15,11 +15,13 @@
   </head>
   <body class="page-body">
     <header class="page-header">
-      <a class="page-header__logo-link">
+      <div class="page-header__container">
+        <a class="page-header__logo-link">
           <img class="page-header__logo" src="./img/logo.svg" alt="Logotype Rx4Route">
       </a>
       <div class="page-header__toggle-container">
-        <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню навигации">Бургер</button>
+        <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню навигации"></button>
+      </div>
       </div>
       <nav class="menu">
         <ul class="menu__list">
@@ -37,7 +39,7 @@
           </li>
         </ul>
       </nav>
-      <button class="page-header__button" type="button">Get Quote</button>
+      <button class="page-header__button button button--bordered" type="button">Get Quote</button>
     </header>
     <main class="page-main">
         {{> body }}
