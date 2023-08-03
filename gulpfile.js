@@ -11,6 +11,7 @@ import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
+import panini from 'panini';
 import browser from 'browser-sync';
 
 // Styles
@@ -37,7 +38,14 @@ export const styles = () => {
 // HTML
 
 const html = () => {
+  panini.refresh();
   return gulp.src('source/*.html')
+    .pipe(panini({
+      root: 'source/',
+      layouts: 'source/pages/layouts/',
+      partials: 'source/pages/partials/',
+      data: 'source/pages/data/'
+    }))
     .pipe(gulp.dest('build'));
 }
 
@@ -98,13 +106,14 @@ const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
+    'source/vendor/**/*.*'
   ], {
     base: 'source'
   })
     .pipe(gulp.dest('build'));
   gulp.src([
     'source/normalize.min.css',
-    ])
+  ])
     .pipe(gulp.dest('build/css'));
   done();
 }
@@ -143,6 +152,7 @@ const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
   gulp.watch('source/*.html', gulp.series(html, reload));
+  gulp.watch(["./source/pages/{layouts,partials,data}/**/*"], gulp.series(html));
 }
 
 // Build

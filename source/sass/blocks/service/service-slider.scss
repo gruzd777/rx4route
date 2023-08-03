@@ -1,0 +1,19 @@
+.service-slider__item {
+  display: none;
+}
+
+.service-slider__item--active {
+  display: block;
+}
+
+.service-slider__item:nth-child(1) {
+  background-color: red;
+}
+
+.service-slider__item:nth-child(2) {
+  background-color: blue;
+}
+
+.service-slider__item:nth-child(3) {
+  background-color: green;
+}

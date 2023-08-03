@@ -17,6 +17,7 @@
     "gulp-svgmin": "^4.1.0",
     "gulp-svgstore": "8.0.0",
     "gulp-terser": "^2.1.0",
+    "panini": "^1.7.2",
     "postcss": "8.3.11",
     "postcss-csso": "^6.0.0",
     "stylelint": "13.13.1",
