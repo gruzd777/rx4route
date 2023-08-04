@@ -16,39 +16,58 @@
   line-height: 130%;
   margin-bottom: 16px;
   max-width: 485px;
+}
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+.subpromo__text--second {
+  margin-bottom: 40px;
+}
+
+.subpromo__card-container {
+  position: relative;
+  width: 375px;
+  height: 235px;
+  margin: 0 auto 72px;
 }
 
 .subpromo__card {
+  position: absolute;
   box-sizing: border-box;
+  padding-top: 32px;
+  padding-left: 8px;
+  padding-right: 8px;
   border-radius: 24px;
-  padding: 30px 26px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .subpromo__card--first {
-  width: 172px;
+  top: 70px;
+  left: -8px;
+  width: 156px;
   height: 194px;
   background: #76E3D4;
   transform: rotate(-5deg);
-}
-
-.subpromo__icon {
-}
-.subpromo__icon--fan {
+  z-index: 5;
 }
 
 .subpromo__card--second {
+  top: 0;
+  right: -5px;
   width: 227px;
-  height: 299px;
+  min-height: 299px;
   transform: rotate(11deg);
   background: #CBD2F9;
 }
+
+.subpromo__icon {
+  margin-bottom: 14px;
+}
+
+.subpromo__icon--fan {
+
+}
+
 .subpromo__icon--world {
 }
 
@@ -56,4 +75,12 @@
   color: #3C3C3B;
   text-align: center;
   font-size: 16px;
+}
+
+.subpromo__card-text--first {
+  width: 120px;
+}
+
+.subpromo__card-text--second {
+  width: 185px;
 }
