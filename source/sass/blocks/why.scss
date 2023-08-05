@@ -29,7 +29,8 @@
 }
 .why__map {
   position: relative;
-  margin: 0 0 90px 0;
+  margin: 0 auto 90px auto;
+  max-width: 400px;
 }
 
 .why__pic {
@@ -56,4 +57,34 @@
 .why__img-hipa {
   display: block;
   position: absolute;
+  right: -25px;
+  bottom: -30px;
+}
+
+.why__img-dashboard {
+  display: block;
+  border-radius: 25px;
+  width: 100%;
+}
+
+.why__img-bundl {
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.why__description--margin {
+  margin-bottom: 110px;
+}
+
+.why__communication {
+  display: block;
+  border-radius: 25px;
+}
+
+.why__img-tel {
+  position: absolute;
+  bottom: -55px;
+  right: 20px;
 }
