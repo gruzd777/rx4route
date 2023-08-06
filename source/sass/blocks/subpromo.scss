@@ -1,0 +1,87 @@
+.subpromo {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background: #190C39;
+  color: $basic_white;
+  padding: 24px 16px 32px 16px;
+}
+
+.subpromo__title {
+  max-width: 385px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.subpromo__text {
+  font-size: 16px;
+  line-height: 130%;
+  margin-bottom: 16px;
+  max-width: 485px;
+}
+
+.subpromo__text--second {
+  margin-bottom: 40px;
+}
+
+.subpromo__card-container {
+  position: relative;
+  width: 375px;
+  height: 235px;
+  margin: 0 auto 72px;
+}
+
+.subpromo__card {
+  position: absolute;
+  box-sizing: border-box;
+  padding-top: 32px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subpromo__card--first {
+  top: 70px;
+  left: -8px;
+  width: 156px;
+  height: 194px;
+  background: #76E3D4;
+  transform: rotate(-5deg);
+  z-index: 5;
+}
+
+.subpromo__card--second {
+  top: 0;
+  right: -5px;
+  width: 227px;
+  min-height: 299px;
+  transform: rotate(11deg);
+  background: #CBD2F9;
+}
+
+.subpromo__icon {
+  margin-bottom: 14px;
+}
+
+.subpromo__icon--fan {
+
+}
+
+.subpromo__icon--world {
+}
+
+.subpromo__card-text {
+  color: #3C3C3B;
+  text-align: center;
+  font-size: 16px;
+}
+
+.subpromo__card-text--first {
+  width: 120px;
+}
+
+.subpromo__card-text--second {
+  width: 185px;
+}

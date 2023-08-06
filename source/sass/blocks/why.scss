@@ -1,0 +1,90 @@
+.why {
+  padding: 130px 16px 0;
+}
+
+.why__title {
+  width: 260px;
+  margin: 0 auto 16px;
+}
+
+.why__subtitle {
+  max-width: 365px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.why__list {
+}
+.why__item {
+}
+
+.why__item-title {
+  width: 310px;
+  margin: 0 0 16px 0;
+}
+
+.why__description {
+  max-width: 400px;
+  margin: 0 0 24px 0;
+}
+.why__map {
+  position: relative;
+  margin: 0 auto 90px auto;
+  max-width: 400px;
+}
+
+.why__pic {
+  display: block;
+  min-width: 350px;
+  margin: 0 auto;
+}
+
+.why__widget {
+  display: block;
+  position: absolute;
+}
+
+.why__widget-time {
+  top: 135px;
+  left: -25px;
+}
+
+.why__widget-name {
+  top: 10px;
+  right: -15px;
+}
+
+.why__img-hipa {
+  display: block;
+  position: absolute;
+  right: -25px;
+  bottom: -30px;
+}
+
+.why__img-dashboard {
+  display: block;
+  border-radius: 25px;
+  width: 100%;
+}
+
+.why__img-bundl {
+  position: absolute;
+  top: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.why__description--margin {
+  margin-bottom: 110px;
+}
+
+.why__communication {
+  display: block;
+  border-radius: 25px;
+}
+
+.why__img-tel {
+  position: absolute;
+  bottom: -55px;
+  right: 20px;
+}
