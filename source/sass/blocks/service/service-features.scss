@@ -1,0 +1,36 @@
+.service-features {
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 155px;
+  margin-top: -36px;
+  padding-top: 189px;
+}
+
+.service-features__title {
+  margin-bottom: 23px;
+  padding: 0 35px;
+}
+
+.service-features__buttons-container {
+  width: 100%;
+  // overflow-x: scroll;
+  overflow: auto;
+  padding-left: 35px;
+  margin-bottom: 10px;
+}
+
+.service-features__buttons-container::-webkit-scrollbar {
+  // display: none;
+}
+
+.service-features__buttons {
+  display: inline-flex;
+  width: auto;
+  white-space: nowrap;
+
+}
+
+.service-features__button {
+  padding: 18px 31px 16px;
+  font-size: 16px;
+}

@@ -1,0 +1,12 @@
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: violet;
+  opacity: 0.3;
+  display: block;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
