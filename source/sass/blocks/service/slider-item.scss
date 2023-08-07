@@ -1,6 +1,7 @@
 .slider-item {
   padding: 0 35px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .slider-item__description {
@@ -8,6 +9,12 @@
   border-radius: 18px;
   margin-bottom: 9px;
   background: #b9f8ec;
+  @media(min-width: $desktop-middle) {
+    position: absolute;
+    right: 12px;
+    bottom: 50px;
+    width: 336px;
+  }
 }
 
 .slider-item__description--sky {

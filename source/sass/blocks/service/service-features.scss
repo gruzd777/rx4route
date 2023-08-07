@@ -1,14 +1,48 @@
 .service-features {
   width: 100%;
   box-sizing: border-box;
-  padding-bottom: 155px;
   margin-top: -36px;
-  padding-top: 189px;
+  padding: 165px 16px 127px;
+  @media(min-width: $tablet) {
+    // padding: 189px 40px 155px;
+  }
+  @media(min-width: $desktop-middle) {
+
+  }
+}
+
+.service-features__wrapper {
+  border-radius: 40px;
+  background-color: #ffffff
+  overflow: hidden;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  @media(min-width: $tablet) {
+
+  }
+  @media(min-width: $desktop-middle) {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+}
+
+.service-features__container {
+  @media(min-width: $tablet) {
+ 
+  }
+  @media(min-width: $desktop-middle) {
+    display: flex;
+    justify-content: space-between;
+  }  
 }
 
 .service-features__title {
   margin-bottom: 23px;
   padding: 0 35px;
+  box-sizing: border-box;
+  @media(min-width: $tablet) {
+    
+  }
 }
 
 .service-features__buttons-container {
@@ -17,6 +51,14 @@
   overflow: auto;
   padding-left: 35px;
   margin-bottom: 10px;
+  @media(min-width: $tablet) {
+
+  }
+  @media(min-width: $desktop-middle) {
+    width: 300px;
+    overflow: visible;
+  }  
+  
 }
 
 .service-features__buttons-container::-webkit-scrollbar {
@@ -27,10 +69,25 @@
   display: inline-flex;
   width: auto;
   white-space: nowrap;
-
+  @media(min-width: $tablet) {
+    
+  }
+  @media(min-width: $desktop-middle) {
+    display: block;
+  }    
 }
 
 .service-features__button {
   padding: 18px 31px 16px;
   font-size: 16px;
+  display: block;
+}
+
+.service-features__slider {
+  @media(min-width: $tablet) {
+    
+  }
+  @media(min-width: $desktop-middle) {
+    width: 854px;
+  }    
 }
