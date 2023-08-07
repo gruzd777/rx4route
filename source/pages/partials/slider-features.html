@@ -1,25 +1,17 @@
 <section class="service-features">
-  <h2 class="title-2">Service features</h2>
-  <div class="service-features__buttons">
-    <button class="service-features__button button button--squared active" type="button">For Pharmacies</button>
-    <button class="service-features__button button button--squared" type="button">For Drivers</button>
-    <button class="service-features__button button button--squared" type="button">For Patients</button>
+  <div class="service-features__wrapper">
+    <h2 class="service-features__title title-2">Service features</h2>
+    <div class="service-features__container">
+      <div class="service-features__buttons-container">
+        <div class="service-features__buttons">
+          <button class="service-features__button button button--squared active" type="button">For Pharmacies</button>
+          <button class="service-features__button button button--squared" type="button">For Drivers</button>
+          <button class="service-features__button button button--squared" type="button">For Patients</button>
+        </div>
+      </div>
+      <ul class="service-features__slider service-slider">
+        {{> service-slider-screens}}
+      </ul>
+    </div>
   </div>
-
-  <!-- Первый слайдер -->
-  <ul class="service-slider">
-    <li class="service-slider__item service-slider__item--active">
-      {{> service-slider-pharmacies}}
-    </li>
-
-    <!-- Второй слайдер -->
-    <li class="service-slider__item">
-      {{> service-slider-drivers}}
-    </li>
-
-    <!-- Третий слайдер -->
-    <li class="service-slider__item">
-      {{> service-slider-patients}}
-    </li>
-  </ul>
 </section>

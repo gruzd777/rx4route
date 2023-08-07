@@ -1,0 +1,43 @@
+.slider-item {
+  padding: 0 35px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.slider-item__description {
+  padding: 26px 26px 37px;
+  border-radius: 18px;
+  margin-bottom: 9px;
+  background: #b9f8ec;
+  @media(min-width: $desktop-middle) {
+    position: absolute;
+    right: 12px;
+    bottom: 50px;
+    width: 336px;
+  }
+}
+
+.slider-item__description--sky {
+  background-color: #d8ebfd;
+}
+
+.slider-item__description--pistachios {
+  background-color: #b9f8ec;;
+}
+
+.slider-item__description--violet {
+  background-color: #e8d5fc;
+}
+
+.slider-item__title {
+  margin-bottom: 16px;
+}
+
+.slider-item__text {}
+
+.slider-item__picture {}
+
+.slider-item__pic {
+  width: 100%;
+  display: block;
+}

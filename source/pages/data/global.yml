@@ -1,0 +1,68 @@
+slider:
+  -
+    screen:
+      -
+        description-title: Driver Management
+        description-text: Easily manage your driver capacity and schedules through our intuitive platform. Assign deliveries based on driver availability and proximity, ensuring optimized resource allocation and timely prescription deliveries.
+        img-mob: slide-features/pharmacies/driver-management
+        background: sky
+      -
+        description-title: Seamless Integration
+        description-text: Connect Rx4Route with your existing pharmacy Information and Prescription Systems (IPS) effortlessly, without disrupting your workflow. Our software integrates smoothly, ensuring a hassle-free transition.
+        img-mob: slide-features/pharmacies/seamless-integration
+        background: pistachios
+      -
+        description-title: Route Optimization
+        description-text: Maximize efficiency by leveraging our advanced route optimization algorithms. Rx4Route calculates the most efficient delivery routes for your drivers, reducing travel time and costs while improving overall delivery speed.
+        img-mob: slide-features/pharmacies/route-optimization
+        background: violet  
+      -
+        description-title: Driver Management
+        description-text: Easily manage your driver capacity and schedules through our intuitive platform. Assign deliveries based on driver availability and proximity, ensuring optimized resource allocation and timely prescription deliveries.
+        img-mob: slide-features/pharmacies/driver-management-1
+        background: pistachios
+  -
+    screen:
+      -
+        description-title: Simplified Route Navigation
+        description-text: Rx4Route provides drivers with realtime route guidance, helping them navigate efficiently from one destination to another. Optimize your driving routes and reach patients quickly, saving time and fuel.
+        img-mob: slide-features/pharmacies/driver-management
+        background: pistachios
+      -
+        description-title: Instant Order Notifications
+        description-text: Drivers receive instant notifications on their app whenever a new delivery order is assigned to them. This feature ensures drivers are always up-to-date with their schedule and can promptly begin their next delivery.
+        img-mob: seamless-m
+        background: violet
+      -
+        description-title: Real-time Navigation
+        description-text: Our integrated GPS navigation system guides drivers throughout the entire delivery journey. Drivers can rely on turn-by-turn directions and real-time traffic updates to navigate the best route and avoid potential delays.
+        img-mob: seamless-m
+        background: sky
+      -
+        description-title: Intuitive Mobile App
+        description-text: Our dedicated mobile app is designed with drivers in mind. It provides a straightforward interface that allows drivers to access all essential information, including delivery details, customer addresses, and real-time updates, right at their fingertips.
+        img-mob: seamless-m
+        background: pistachios   
+      -
+        description-title: Efficient Route Planning
+        description-text: Say goodbye to guesswork and time-consuming route planning. Our software automatically generates optimized delivery routes, ensuring drivers take the most efficient path to complete their deliveries promptly.
+        img-mob: seamless-m
+        background: violet
+  -
+    screen:
+      -
+        description-title: Customer Communication
+        description-text: Enhance patient satisfaction with our text message system. As you dispatch orders, patients receive instant alerts and detailed delivery instructions, ensuring seamless coordination and elevating your service standard
+        img-mob: slide-features/pharmacies/driver-management
+        background: violet
+      -
+        description-title: Delivery Status Updates
+        description-text: Keep customers informed and satisfied with timely delivery status updates. Our software allows drivers to send automatic notifications to customers, ensuring they are aware of their order's progress.
+        img-mob: slide-features/pharmacies/driver-management
+        background: pistachios
+      -
+        description-title: Electronic Proof of Delivery
+        description-text: Our ePOD feature enables drivers to record essential delivery details, including customer signatures, delivery timestamps, and any additional notes. This digital record enhances transparency and simplifies proof of delivery documentation.
+        img-mob: slide-features/pharmacies/driver-management
+        background: sky               
+      
