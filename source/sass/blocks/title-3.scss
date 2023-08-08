@@ -7,3 +7,9 @@
     color: $basic_white;
   }
 }
+
+@media (min-width: $tablet) {
+  .title-3 {
+    font-size: 30px;
+  }
+}

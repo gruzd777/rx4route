@@ -82,3 +82,23 @@
   margin: 0 auto;
   text-align: center;
 }
+
+@media (min-width: $tablet) {
+  .page-footer {
+    border-bottom: 60px solid $background;
+    box-sizing: border-box;
+  }
+
+
+  .page-footer__menu {
+    justify-content: flex-start;
+  }
+
+  .page-footer__text {
+    font-size: 16px;
+  }
+
+  .page-footer__menu-container:first-child {
+    margin-right: 152px;
+  }
+}

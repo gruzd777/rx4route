@@ -3,3 +3,9 @@
   font-weight: 700;
   line-height: 110%;
 }
+
+@media (min-width: $tablet) {
+  .title-4 {
+    font-size: 28px;
+  }
+}
