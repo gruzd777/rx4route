@@ -1,5 +1,5 @@
 .menu {
-
+  margin-top: 32px;
 }
 
 .menu__list {
@@ -19,4 +19,8 @@
   &:hover {
     opacity: 0.5;
   }
+}
+
+@media (min-width: $tablet) {
+  
 }

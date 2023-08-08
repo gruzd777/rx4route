@@ -23,3 +23,14 @@
 .subpromo__logo {
 
 }
+
+@media (min-width: $tablet) {
+  .subpromo-slider {
+    background: #190C39 url(../../img/elipse-tablet.png) no-repeat center bottom;
+    background-size: contain;
+  }
+
+  .subpromo-slider__title {
+    width: 542px;
+  }
+}

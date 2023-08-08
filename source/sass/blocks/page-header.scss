@@ -9,7 +9,6 @@
 .page-header__container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 32px;
 }
 
 .page-header__logo-link {
@@ -64,5 +63,12 @@
 .page-header__button {
   width: 223px;
   padding: 17px 32px;
+}
+
+@media (min-width: $tablet) {
+  .page-header {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 

@@ -88,3 +88,19 @@
   bottom: -55px;
   right: 20px;
 }
+
+@media (min-width: $tablet) {
+  .why {
+    padding: 160px 60px 160px;
+  }
+
+  .why__title {
+    width: 275px;
+    margin-bottom: 24px;
+  }
+
+  .why__subtitle {
+    max-width: 480px;
+    margin-bottom: 68px;
+  }
+}
