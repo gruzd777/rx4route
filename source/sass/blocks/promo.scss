@@ -20,6 +20,10 @@
   line-height: 130%;
 }
 
+.promo__brake {
+  display: none;
+}
+
 .promo__button {
   width: 100%;
   margin-bottom: 40px;
@@ -40,5 +44,19 @@
     line-height: 110%;
     width: 565px;
     max-width: 565px;
+  }
+
+  .promo__text {
+    max-width: 435px;
+    font-size: 18px;
+  }
+
+  .promo__button {
+    width: 223px;
+    margin: 0 auto 48px;
+  }
+
+  .promo__brake {
+    display: block;
   }
 }
