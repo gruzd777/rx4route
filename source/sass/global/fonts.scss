@@ -17,3 +17,23 @@
     url("../../fonts/mulishbold.woff2") format("woff2"),
     url("../../fonts/mulishbold.woff") format("woff");
 }
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local(""),
+    url("../../fonts/montserratmedium.woff2") format("woff2"),
+    url("../../fonts/montserratmedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local(""),
+    url("../../fonts/montserratsemibold.woff2") format("woff2"),
+    url("../../fonts/montserratsemibold.woff") format("woff");
+}
