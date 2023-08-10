@@ -1,5 +1,5 @@
 .subpromo-slider {
-  background: #190C39 url(../../img/elips.png) no-repeat center bottom;
+  background: #190C39 url("../img/elips.png") no-repeat center bottom;
   background-size: contain;
   color: $basic_white;
   padding-bottom: 56px;
@@ -11,7 +11,6 @@
   width: 382px;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 500px;
 }
 
 .subpromo__logo-link {

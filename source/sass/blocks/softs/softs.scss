@@ -1,0 +1,166 @@
+.softs {
+  position: relative;
+  height: 236px;
+  width: 144px;
+  margin: 0 auto;
+}
+
+.softs__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 236px;
+  width: 144px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.softs__item--active {
+  opacity: 1;
+  
+}
+
+.softs__link {
+  width: 144px;
+  height: 64px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.softs__center {
+  border-radius: 26px;
+  border: 1px dashed #ffffff;
+  padding: 20px 23px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.softs__logo {
+  width: 100%;
+}
+
+.softs__block {
+  padding: 0;
+  margin: 0;
+  height: 154px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &::before {
+    content: "";
+    height: 154px;
+    width: 1px;
+    border-left: 2px solid #8871F6;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% + 12px);
+  }
+
+  &::after {
+    content: "";
+    height: 154px;
+    width: 1px;
+    border-left: 2px solid #31D8B1;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 12px);
+  }
+}
+
+.softs__in {
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  border-radius: 30px;
+  background: #8871f6;
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  width: 74px;
+  padding: 6px 17px;
+  line-height: 13px;
+  position: absolute;
+  left: calc(50% + 19px);
+  top: 100%;
+
+  &::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #8871f6;
+    position: absolute;
+    left: -11px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.softs__item--active .softs__in {
+  animation: in 5s ease;
+}
+
+.softs__out {
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  border-radius: 30px;
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #31d8b1 url("../img/softs/check.svg")no-repeat 12px 7px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  padding: 4px 12px 4px 27px;
+  background-size: 12px 12px;
+  position: absolute;
+  right: calc(50% + 19px);
+
+  &::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #31d8b1;
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.softs__item--active .softs__out{
+  animation: out 5s ease;
+}
+
+@keyframes in {
+  0%   {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes out {
+  0%   {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}

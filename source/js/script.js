@@ -7,6 +7,19 @@ const classActiveServiceSliderScreen = 'service-slider__item--active';
 
 const serviceFeaturesScreen = document.querySelector('.service-slider__item');
 
+const firstSoft = document.querySelector('.softs__item');
+const softs = document.querySelectorAll('.softs__item');
+firstSoft.classList.add('softs__item--active');
+
+setInterval(() => {
+  const activeSoft = document.querySelector('.softs__item--active');
+  const index = Array.from(softs).indexOf(activeSoft);
+  activeSoft.classList.remove('softs__item--active');
+  const newIndex = index + 1 < softs.length ? index + 1 : 0;
+  console.log(newIndex)
+  Array.from(softs)[newIndex].classList.add('softs__item--active');
+}, 6000);
+
 serviceFeaturesScreen.classList.add('service-slider__item--active');
 
 const setActive = (element, classNameActive, classNameBase) => {
@@ -33,15 +46,4 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper__pagination',
     slidesPerView: 1
   },
-  // breakpoints: {
-  //   768: {
-  //     slidesPerView: 1
-  //   },
-  //   1000: {
-  //     slidesPerView: 5
-  //   },
-  //   1200: {
-  //     slidesPerView: null
-  //   }
-  // }
 });

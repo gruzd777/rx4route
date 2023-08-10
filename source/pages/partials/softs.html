@@ -1,0 +1,17 @@
+<ul class="softs">
+  {{#each global.softs}}
+  <li class="softs__item softs__item--{{class}}">
+    {{#ifequal class 'your'}}
+    <p class="softs__center">{{text}}</p>
+    {{else}}
+    <a href="#" class="softs__link">
+      <img class="softs__logo" src="./img/softs/{{img}}.svg" alt="{{text}}">
+    </a>
+    {{/ifequal}}
+    <dl class="softs__block">
+      <dt class="softs__in">Patient info</dt>
+      <dd class="softs__out">{{out}}</dd>
+    </dl>
+  </li>
+  {{/each}}
+</ul>
