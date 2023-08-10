@@ -47,10 +47,9 @@
 
 .service-features__buttons-container {
   width: 100%;
-  // overflow-x: scroll;
-  overflow: auto;
   padding-left: 35px;
-  margin-bottom: 10px;
+  margin-bottom: 23px;
+  box-sizing: border-box;
   @media(min-width: $tablet) {
 
   }

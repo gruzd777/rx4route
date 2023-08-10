@@ -2,7 +2,7 @@
   position: relative;
   height: 236px;
   width: 144px;
-  margin: 0 auto;
+  margin: 0 auto 24px;
 }
 
 .softs__item {
@@ -28,6 +28,9 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 14px;
 }
 
 .softs__center {
@@ -43,7 +46,8 @@
 }
 
 .softs__logo {
-  width: 100%;
+  height: 100%;
+  width: auto;
 }
 
 .softs__block {
@@ -95,6 +99,7 @@
   position: absolute;
   left: calc(50% + 19px);
   top: 100%;
+  transform: translateY(-50%);
 
   &::before {
     content: "";
@@ -121,7 +126,7 @@
   text-align: center;
   display: inline-block;
   box-sizing: border-box;
-  background: #31d8b1 url("../img/softs/check.svg")no-repeat 12px 7px;
+  background: #31d8b1 url("../img/softs/check.svg")no-repeat 12px center;
   font-size: 13px;
   font-weight: 500;
   line-height: 18px;
@@ -129,6 +134,7 @@
   background-size: 12px 12px;
   position: absolute;
   right: calc(50% + 19px);
+  transform: translateY(-50%);
 
   &::before {
     content: "";

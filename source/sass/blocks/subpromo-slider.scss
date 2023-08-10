@@ -3,13 +3,11 @@
   background-size: contain;
   color: $basic_white;
   padding-bottom: 56px;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
 }
 
 .subpromo-slider__title {
   max-width: 382px;
-  margin: 0 auto;
+  margin: 0 auto 87px;
   text-align: center;
 }
 
@@ -25,7 +23,7 @@
 
 @media (min-width: $tablet) {
   .subpromo-slider {
-    background: #190C39 url(../../img/elipse-tablet.png) no-repeat center bottom;
+    background: #190C39 url("../img/elipse-tablet.png") no-repeat center bottom;
     background-size: contain;
   }
 
