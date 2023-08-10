@@ -17,13 +17,29 @@ setInterval(() => {
   activeSoft.classList.remove('softs__item--active');
   const newIndex = index + 1 < softs.length ? index + 1 : 0;
   Array.from(softs)[newIndex].classList.add('softs__item--active');
-}, 6000);
+}, 5000);
 
 serviceFeaturesScreen.classList.add('service-slider__item--active');
 
 const setActive = (element, classNameActive, classNameBase) => {
   document.querySelector(`.${classNameBase}.${classNameActive}`).classList.remove(classNameActive);
   element.classList.add(classNameActive)
+};
+
+const moveMenu = () => {
+  const activeElement = document.querySelector('.service-features__button.active');
+  const buttonElements = Array.from(serviceFeaturesButtons)
+  const activeElementIndex = buttonElements.indexOf(activeElement);
+
+  serviceFeaturesButtonContainer.innerHTML = '';
+
+  buttonElements.slice(activeElementIndex, buttonElements.length).forEach((item) => {
+    serviceFeaturesButtonContainer.append(item)
+  });
+
+  buttonElements.slice(0, activeElementIndex).forEach((item) => {
+    serviceFeaturesButtonContainer.append(item)
+  });
 };
 
 serviceFeaturesButtonContainer.addEventListener('click', (e) => {
@@ -34,8 +50,7 @@ serviceFeaturesButtonContainer.addEventListener('click', (e) => {
       'service-slider__item--active',
       'service-slider__item'
     );
-
-    //swiper.activeIndex
+    moveMenu();
   }
 });
 
@@ -55,12 +70,8 @@ const toggle = document.querySelector('.page-header__toggle');
 const mainButton = document.querySelector('.page-header__button')
 const pageHeaderElement = document.querySelector('.page-header');
 
-console.log(menu);
-console.log(toggle);
-
 toggle.addEventListener('click', function() {
   toggle.classList.toggle('page-header__toggle--closed');
   menu.classList.toggle('menu--oppened');
   pageHeaderElement.classList.toggle('page-header--menu-oppened');
-  // mainButton.classList.toggle('page-header__button--oppened');
 })
