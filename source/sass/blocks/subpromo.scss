@@ -4,6 +4,9 @@
   background: #190C39;
   color: $basic_white;
   padding: 24px 16px 32px 16px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .subpromo__title {
@@ -24,7 +27,7 @@
 
 .subpromo__card-container {
   position: relative;
-  max-width: 375px;
+  width: 100%;
   height: 235px;
   margin: 0 auto 72px;
 }
@@ -43,7 +46,7 @@
 
 .subpromo__card--first {
   top: 70px;
-  left: -8px;
+  right: 50%;
   width: 156px;
   height: 194px;
   background: #76E3D4;
@@ -53,7 +56,7 @@
 
 .subpromo__card--second {
   top: 0;
-  right: -5px;
+  left: 50%;
   width: 227px;
   min-height: 299px;
   transform: rotate(11deg);

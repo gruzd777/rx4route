@@ -16,7 +16,6 @@ setInterval(() => {
   const index = Array.from(softs).indexOf(activeSoft);
   activeSoft.classList.remove('softs__item--active');
   const newIndex = index + 1 < softs.length ? index + 1 : 0;
-  console.log(newIndex)
   Array.from(softs)[newIndex].classList.add('softs__item--active');
 }, 6000);
 
