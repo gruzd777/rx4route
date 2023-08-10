@@ -64,5 +64,36 @@ slider:
         description-title: Electronic Proof of Delivery
         description-text: Our ePOD feature enables drivers to record essential delivery details, including customer signatures, delivery timestamps, and any additional notes. This digital record enhances transparency and simplifies proof of delivery documentation.
         img-mob: slide-features/pharmacies/driver-management
-        background: sky               
+        background: sky
+softs:
+  -
+    class: your
+    text: Your Software
+    img: softrx
+    out: Photo
+  -
+    class: datascan
+    text: DataScan
+    img: datascan
+    out: Photo
+  -
+    class: pksoftware
+    text: PKSoftware
+    img: pksoftware
+    out: Signature
+  -
+    class: primerx
+    text: PrimeRx
+    img: primerx
+    out: ETA
+  -
+    class: pioneerrx
+    text: PoneerPx
+    img: pioneerrx
+    out: Tracking info            
+  -
+    class: suiterx
+    text: SuiteRx
+    img: suiterx
+    out: Photo         
       
