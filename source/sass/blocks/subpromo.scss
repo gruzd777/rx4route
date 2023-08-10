@@ -13,7 +13,6 @@
 }
 
 .subpromo__text {
-  font-size: 16px;
   line-height: 130%;
   margin-bottom: 16px;
   max-width: 485px;
@@ -25,7 +24,7 @@
 
 .subpromo__card-container {
   position: relative;
-  width: 375px;
+  max-width: 375px;
   height: 235px;
   margin: 0 auto 72px;
 }
@@ -84,4 +83,29 @@
 
 .subpromo__card-text--second {
   width: 185px;
+}
+
+@media (min-width: $tablet) {
+  .subpromo {
+    padding: 48px 60px 64px;
+  }
+
+
+  .subpromo__title {
+    max-width: 485px;
+    margin: 0 auto 24px;
+    text-align: center;
+  }
+
+  .subpromo__text {
+    margin: 0 auto 24px;
+    text-align: center;
+    max-width: 460px;
+  }
+
+  .subpromo__text--second {
+    margin-bottom: 48px;
+  }
+
+
 }

@@ -20,7 +20,9 @@
           <img class="page-header__logo" src="./img/logo.svg" alt="Logotype Rx4Route">
       </a>
       <div class="page-header__toggle-container">
-        <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню навигации"></button>
+        <button class="page-header__toggle page-header__toggle--closed" type="button" aria-label="Открыть/закрыть меню навигации">
+          <span></span>
+        </button>
       </div>
       </div>
       <nav class="menu">
@@ -38,8 +40,8 @@
             <a href="#contacts" class="menu__link">Contacts</a>
           </li>
         </ul>
+        <button class="page-header__button button button--bordered" type="button">Get Quote</button>
       </nav>
-      <button class="page-header__button button button--bordered" type="button">Get Quote</button>
     </header>
     <main class="page-main">
         {{> body }}
@@ -82,5 +84,6 @@
     </footer>
     <script src="./vendor/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/burger.js"></script>
   </body>
 </html>
