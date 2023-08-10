@@ -1,5 +1,14 @@
 .menu {
   margin-top: 32px;
+  height: 0;
+  margin: 0;
+  transform: translateX(100vw);
+  transition: 1s;
+}
+
+.menu--oppened {
+  transform: translateX(0%);
+  margin-top: 32px;
 }
 
 .menu__list {
@@ -22,5 +31,5 @@
 }
 
 @media (min-width: $tablet) {
-  
+
 }

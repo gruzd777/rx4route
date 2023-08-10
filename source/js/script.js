@@ -45,3 +45,21 @@ const swiper = new Swiper('.swiper', {
   //   }
   // }
 });
+
+
+
+
+const menu = document.querySelector('.menu');
+const toggle = document.querySelector('.page-header__toggle');
+const mainButton = document.querySelector('.page-header__button')
+const pageHeaderElement = document.querySelector('.page-header');
+
+console.log(menu);
+console.log(toggle);
+
+toggle.addEventListener('click', function() {
+  toggle.classList.toggle('page-header__toggle--closed');
+  menu.classList.toggle('menu--oppened');
+  pageHeaderElement.classList.toggle('page-header--menu-oppened');
+  // mainButton.classList.toggle('page-header__button--oppened');
+})
