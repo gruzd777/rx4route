@@ -3,12 +3,12 @@
   box-sizing: border-box;
   margin-top: -36px;
   padding: 165px 0 127px;
+
   @media(min-width: $tablet) {
     // padding: 189px 40px 155px;
   }
-  @media(min-width: $desktop-middle) {
 
-  }
+  @media(min-width: $desktop-middle) {}
 }
 
 .service-features__wrapper {
@@ -17,47 +17,69 @@
   overflow: hidden;
   padding-top: 24px;
   padding-bottom: 24px;
-  @media(min-width: $tablet) {
 
-  }
+  @media(min-width: $tablet) {}
+
   @media(min-width: $desktop-middle) {
     margin: 0 auto;
     max-width: 1200px;
   }
 }
 
+.service-features__slider {
+  position: relative;
+  z-index: 5;
+  margin-top: -13px;
+}
+
 .service-features__container {
-  @media(min-width: $tablet) {
- 
-  }
+  @media(min-width: $tablet) {}
+
   @media(min-width: $desktop-middle) {
     display: flex;
     justify-content: space-between;
-  }  
+  }
 }
 
 .service-features__title {
   margin-bottom: 23px;
   padding: 0 35px;
   box-sizing: border-box;
-  @media(min-width: $tablet) {
-    
-  }
+
+  @media(min-width: $tablet) {}
 }
 
 .service-features__buttons-container {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 30px;
+    background: #ffffff;
+    top: calc(100% - 20px);
+    left: 0;
+    position: absolute;
+    z-index: 5;
+  }
+}
+
+.service-features__buttons-wrapper {
   width: 100%;
   padding-left: 35px;
-  margin-bottom: 23px;
+  padding-bottom: 23px;
   box-sizing: border-box;
-  @media(min-width: $tablet) {
+  position: relative;
+  overflow: auto;
 
-  }
+
+  @media(min-width: $tablet) {}
+
   @media(min-width: $desktop-middle) {
     width: 300px;
     overflow: visible;
-  }  
-  
+  }
+
 }
 
 .service-features__buttons-container::-webkit-scrollbar {
@@ -68,12 +90,12 @@
   display: inline-flex;
   width: auto;
   white-space: nowrap;
-  @media(min-width: $tablet) {
-    
-  }
+
+  @media(min-width: $tablet) {}
+
   @media(min-width: $desktop-middle) {
     display: block;
-  }    
+  }
 }
 
 .service-features__button {
@@ -83,10 +105,9 @@
 }
 
 .service-features__slider {
-  @media(min-width: $tablet) {
-    
-  }
+  @media(min-width: $tablet) {}
+
   @media(min-width: $desktop-middle) {
     width: 854px;
-  }    
+  }
 }
