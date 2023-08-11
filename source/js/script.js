@@ -29,22 +29,6 @@ const setActive = (element, classNameActive, classNameBase) => {
 
 const moveMenu = () => {
   const activeElement = document.querySelector('.service-features__button.active');
-  // const buttonElements = Array.from(serviceFeaturesButtons)
-  // const activeElementIndex = buttonElements.indexOf(activeElement);
-
-  // serviceFeaturesButtonContainer.innerHTML = '';
-
-  // buttonElements.slice(activeElementIndex, buttonElements.length).forEach((item) => {
-  //   serviceFeaturesButtonContainer.append(item)
-  // });
-
-  // buttonElements.slice(0, activeElementIndex).forEach((item) => {
-  //   serviceFeaturesButtonContainer.append(item)
-  // });
-
-  // serviceFeaturesButtonWrapper.scrollLeft += 20;
-  console.log(activeElement.offsetLeft)
-  // serviceFeaturesButtonWrapper.scrollTo({left: 200, behavior: "smooth"})
   serviceFeaturesButtonWrapper.scrollLeft = activeElement.offsetLeft;
 };
 
