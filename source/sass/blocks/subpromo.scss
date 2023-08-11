@@ -4,6 +4,8 @@
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
+  z-index: 10;
+  position: relative;
 }
 
 .subpromo__title {
