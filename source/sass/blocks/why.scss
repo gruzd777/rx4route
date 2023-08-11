@@ -3,6 +3,8 @@
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
+  position: relative;
+  z-index: 10;
 }
 
 .why__title {
@@ -208,4 +210,11 @@
     max-width: 480px;
     margin-bottom: 68px;
   }
+}
+
+.why__widget-driver-out {
+  width: 214px;
+  position: absolute;
+  right: -28px;
+  top: -11px;
 }

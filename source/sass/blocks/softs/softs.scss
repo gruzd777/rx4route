@@ -1,6 +1,6 @@
 .softs {
   position: relative;
-  height: 236px;
+  height: 275px;
   width: 144px;
   margin: 0 auto 24px;
 }
@@ -9,7 +9,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 236px;
+  height: 275px;
   width: 144px;
   opacity: 0;
   transition: opacity 0.5s;
@@ -17,12 +17,12 @@
 
 .softs__item--active {
   opacity: 1;
-  
+
 }
 
 .softs__link {
-  width: 144px;
-  height: 64px;
+  width: 165px;
+  height: 100px;
   display: block;
   position: absolute;
   top: 0;
@@ -43,6 +43,12 @@
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
+  width: 165px;
+  height: 100px;
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 .softs__logo {
@@ -93,13 +99,15 @@
   font-size: 13px;
   font-weight: 500;
   line-height: 18px;
-  width: 74px;
-  padding: 6px 17px;
+  // width: 74px;
+  padding: 6px 17px 7px;
   line-height: 13px;
   position: absolute;
   left: calc(50% + 19px);
   top: 100%;
   transform: translateY(-50%);
+  opacity: 0;
+  white-space: nowrap;
 
   &::before {
     content: "";
@@ -115,7 +123,7 @@
 }
 
 .softs__item--active .softs__in {
-  animation: in 5s ease;
+  animation: in 6s ease;
 }
 
 .softs__out {
@@ -135,6 +143,8 @@
   position: absolute;
   right: calc(50% + 19px);
   transform: translateY(-50%);
+  white-space: nowrap;
+  opacity: 0;
 
   &::before {
     content: "";
@@ -149,24 +159,51 @@
   }
 }
 
-.softs__item--active .softs__out{
-  animation: out 5s ease;
+.softs__item--active .softs__out {
+  animation: out 6s ease;
 }
 
 @keyframes in {
-  0%   {
+  0% {
     top: 0;
+    opacity: 0;
   }
+
+  25% {
+    top: 0;
+    opacity: 1;
+  }
+
+  75% {
+    top: 100%;
+    opacity: 1;
+  }
+
   100% {
+    opacity: 0;
     top: 100%;
   }
 }
 
 @keyframes out {
-  0%   {
+ 
+  0% {
     top: 100%;
+    opacity: 0;
   }
+
+  25% {
+    top: 100%;
+    opacity: 1;
+  }
+
+  75% {
+    top: 0%;
+    opacity: 1;
+  }
+
   100% {
-    top: 0;
-  }
+    opacity: 0;
+    top: 0%;
+  }  
 }
