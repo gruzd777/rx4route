@@ -18,7 +18,7 @@ setInterval(() => {
   activeSoft.classList.remove('softs__item--active');
   const newIndex = index + 1 < softs.length ? index + 1 : 0;
   Array.from(softs)[newIndex].classList.add('softs__item--active');
-}, 5000);
+}, 6000);
 
 serviceFeaturesScreen.classList.add('service-slider__item--active');
 
@@ -29,7 +29,20 @@ const setActive = (element, classNameActive, classNameBase) => {
 
 const moveMenu = () => {
   const activeElement = document.querySelector('.service-features__button.active');
-  serviceFeaturesButtonWrapper.scrollLeft = activeElement.offsetLeft;
+  const buttonElements = Array.from(serviceFeaturesButtons)
+  const activeElementIndex = buttonElements.indexOf(activeElement);
+
+  serviceFeaturesButtonContainer.innerHTML = '';
+
+  buttonElements.slice(activeElementIndex, buttonElements.length).forEach((item) => {
+    serviceFeaturesButtonContainer.append(item)
+  });
+
+  buttonElements.slice(0, activeElementIndex).forEach((item) => {
+    serviceFeaturesButtonContainer.append(item)
+  });
+
+  // serviceFeaturesButtonWrapper.scrollLeft = activeElement.offsetLeft;
 };
 
 serviceFeaturesButtonContainer.addEventListener('click', (e) => {
@@ -60,10 +73,10 @@ if (document.querySelector('.hoist')) {
           item.classList.remove('hoisting__element--not-visible');
         });
       }
-  });
-}
+    });
+  }
   const options = {
-    threshold: 0.5 
+    threshold: 0.5
   }
   const observer = new IntersectionObserver(callback, options);
 
