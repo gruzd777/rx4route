@@ -52,7 +52,27 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
+if (document.querySelector('.hoist')) {
+  const callback = (entry) => {
+    entry.forEach(change => {
+      if (change.isIntersecting) {
+        change.target.querySelectorAll('.hoisting__element').forEach((item) => {
+          item.classList.remove('hoisting__element--not-visible');
+        });
+      }
+  });
+}
+  const options = {
+    threshold: 0.5 
+  }
+  const observer = new IntersectionObserver(callback, options);
 
+  const targets = document.querySelectorAll('.hoist');
+
+  targets.forEach((target) => {
+    observer.observe(target);
+  });
+}
 
 
 const menu = document.querySelector('.menu');
@@ -60,7 +80,7 @@ const toggle = document.querySelector('.page-header__toggle');
 const mainButton = document.querySelector('.page-header__button')
 const pageHeaderElement = document.querySelector('.page-header');
 
-toggle.addEventListener('click', function() {
+toggle.addEventListener('click', function () {
   toggle.classList.toggle('page-header__toggle--closed');
   menu.classList.toggle('menu--oppened');
   mainButton.classList.toggle('page-header__button--oppened');
