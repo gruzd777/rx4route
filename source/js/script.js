@@ -41,8 +41,6 @@ const moveMenu = () => {
   buttonElements.slice(0, activeElementIndex).forEach((item) => {
     serviceFeaturesButtonContainer.append(item)
   });
-
-  // serviceFeaturesButtonWrapper.scrollLeft = activeElement.offsetLeft;
 };
 
 serviceFeaturesButtonContainer.addEventListener('click', (e) => {
@@ -87,6 +85,47 @@ if (document.querySelector('.hoist')) {
   });
 }
 
+if (document.querySelector('.hoisting-text')) {
+  const callback = (entry) => {
+    entry.forEach(change => {
+      if (change.isIntersecting) {
+        change.target.classList.remove('hoisting-text--start');
+
+      }
+    });
+  }
+  const options = {
+    threshold: 0.5
+  }
+  const observer = new IntersectionObserver(callback, options);
+
+  const targets = document.querySelectorAll('.hoisting-text');
+
+  targets.forEach((target) => {
+    observer.observe(target);
+  });
+}
+
+if (document.querySelector('.push-right')) {
+  const callback = (entry) => {
+    entry.forEach(change => {
+      if (change.isIntersecting) {
+        change.target.classList.add('push-right--animation');
+
+      }
+    });
+  }
+  const options = {
+    threshold: 1
+  }
+  const observer = new IntersectionObserver(callback, options);
+
+  const targets = document.querySelectorAll('.push-right');
+
+  targets.forEach((target) => {
+    observer.observe(target);
+  });
+}
 
 const menu = document.querySelector('.menu');
 const toggle = document.querySelector('.page-header__toggle');
