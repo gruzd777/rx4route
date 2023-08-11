@@ -12,7 +12,7 @@
   height: 275px;
   width: 144px;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 1.5s;
 }
 
 .softs__item--active {
@@ -21,8 +21,8 @@
 }
 
 .softs__link {
-  width: 165px;
-  height: 100px;
+  width: 154px;
+  height: 74px;
   display: block;
   position: absolute;
   top: 0;
@@ -43,8 +43,8 @@
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  width: 165px;
-  height: 100px;
+  width: 154px;
+  height: 74px;
   box-sizing: border-box;
   justify-content: center;
   display: flex;
@@ -107,7 +107,6 @@
   top: 100%;
   transform: translateY(-50%);
   opacity: 0;
-  white-space: nowrap;
 
   &::before {
     content: "";
@@ -143,7 +142,6 @@
   position: absolute;
   right: calc(50% + 19px);
   transform: translateY(-50%);
-  white-space: nowrap;
   opacity: 0;
 
   &::before {
@@ -186,7 +184,7 @@
 }
 
 @keyframes out {
- 
+
   0% {
     top: 100%;
     opacity: 0;
@@ -205,5 +203,5 @@
   100% {
     opacity: 0;
     top: 0%;
-  }  
+  }
 }
