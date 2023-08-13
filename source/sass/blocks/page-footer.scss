@@ -3,10 +3,6 @@
   padding: 48px 16px 32px;
 }
 
-.page-footer__logo-link {
-}
-.page-footer__logo {
-}
 .page-footer__text {
   width: 285px;
   opacity: 0.7;
@@ -85,17 +81,28 @@
 
 @media (min-width: $tablet) {
   .page-footer {
-    border-bottom: 60px solid $background;
-    box-sizing: border-box;
+    padding: 40px 60px 24px;
   }
 
+  .page-footer__logo-link {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .page-footer__logo {
+    display: block;
+    width: 130px;
+    height: 31px;
+  }
 
   .page-footer__menu {
     justify-content: flex-start;
+    margin-bottom: 52px;
   }
 
   .page-footer__text {
     font-size: 16px;
+    width: 300px;
   }
 
   .page-footer__menu-container:first-child {

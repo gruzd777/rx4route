@@ -204,17 +204,32 @@
   .why__title {
     width: 275px;
     margin-bottom: 24px;
+
+    &:nth-child(even) {
+      margin-left: auto;
+    }
   }
 
   .why__subtitle {
     max-width: 480px;
     margin-bottom: 68px;
+    line-height: 130%;
+  }
+
+  .why__description {
+    width: 395px;
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  .why__description--even {
+    margin-left: auto;
   }
 }
 
-.why__widget-driver-out {
-  width: 214px;
-  position: absolute;
-  right: -28px;
-  top: -11px;
-}
+  .why__widget-driver-out {
+    width: 214px;
+    position: absolute;
+    right: -28px;
+    top: -11px;
+  }
