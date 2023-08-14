@@ -204,3 +204,15 @@
     top: 0%;
   }
 }
+
+@media (min-width: $tablet) {
+  .softs {
+    margin-bottom: 32px;
+  }
+  
+  .softs__in,
+  .softs__out {
+    font-size: 16px;
+    padding: 6px 31px;
+  }
+}
