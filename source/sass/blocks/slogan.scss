@@ -25,3 +25,26 @@
   display: block;
   margin: 0 auto;
 }
+
+@media (min-width: $tablet) {
+  .slogan {
+    padding: 48px 60px 32px;
+  }
+
+  .slogan__title {
+    max-width: 445px;
+    margin-bottom: 24px;
+  }
+
+  .slogan__subtitle {
+    font-size: 18px;
+    line-height: 130%;
+    max-width: 435px;
+    margin-bottom: 24px;
+  }
+
+  .slogan__button {
+    width: 223px;
+    margin: 0 auto 64px;
+  }
+}

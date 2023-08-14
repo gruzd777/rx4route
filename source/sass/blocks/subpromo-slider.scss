@@ -28,6 +28,15 @@
   }
 
   .subpromo-slider__title {
-    width: 542px;
+    max-width: 542px;
+  }
+
+  .subpromo__logo-link {
+    width: 222px;
+    height: 53px;
+  }
+
+  .subpromo__logo {
+    width: 100%;
   }
 }

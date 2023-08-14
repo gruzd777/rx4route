@@ -11,5 +11,9 @@
 @media (min-width: $tablet) {
   .title-3 {
     font-size: 30px;
+
+    &--big {
+      font-size: 45px;
+    }
   }
 }
