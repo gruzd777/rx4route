@@ -40,3 +40,9 @@
     width: 100%;
   }
 }
+
+@media (min-width: $desktop) {
+  .subpromo-slider__title {
+    max-width: 880px;
+  }
+}

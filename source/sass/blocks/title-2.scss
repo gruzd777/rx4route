@@ -11,3 +11,9 @@
     line-height: 110%;
   }
 }
+
+@media (min-width: $desktop) {
+  .title-2 {
+    font-size: 60px; 
+  }
+}
