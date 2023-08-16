@@ -7,7 +7,7 @@
 
 .subpromo-slider__title {
   max-width: 382px;
-  margin: 0 auto 74px;
+  margin: 0 auto 54px;
   text-align: center;
 }
 
@@ -42,6 +42,10 @@
 }
 
 @media (min-width: $desktop) {
+  .subpromo-slider {
+    background: #190C39 url("../img/ellipse-desk.png") no-repeat center bottom;
+  }
+
   .subpromo-slider__title {
     max-width: 880px;
   }

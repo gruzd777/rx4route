@@ -39,7 +39,7 @@
   padding: 20px 23px;
   display: inline-block;
   position: absolute;
-  top: 0;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
@@ -209,7 +209,7 @@
   .softs {
     margin-bottom: 32px;
   }
-  
+
   .softs__in,
   .softs__out {
     font-size: 16px;
