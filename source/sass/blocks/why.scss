@@ -18,10 +18,6 @@
   text-align: center;
 }
 
-.why__list {
-}
-.why__item {
-}
 
 .why__item-title {
   width: 310px;
@@ -35,6 +31,10 @@
 .why__description {
   max-width: 400px;
   margin: 0 0 24px 0;
+}
+
+.why__description--timely {
+  max-width: 340px;
 }
 
 .why__map {
@@ -280,19 +280,24 @@
   }
 
   .why__subtitle {
-    max-width: 480px;
+    max-width: 482px;
     margin-bottom: 68px;
     line-height: 130%;
   }
 
   .why__description {
-    width: 395px;
+    width: 399px;
     font-size: 18px;
     line-height: 130%;
   }
 
   .why__description--even {
     margin-left: auto;
+  }
+
+  .why__description--privacy {
+    max-width: 450px;
+    width: 477px;
   }
 
   .why__map {
@@ -312,11 +317,12 @@
 
   .why__item-title--even {
     margin-left: auto;
-    width: 395px;
+    width: 399px;
   }
 
   .why__item-title--privacy {
     display: block;
+    width: 451px;
   }
 
   .why__svg-container {
@@ -377,31 +383,32 @@
   }
 
   .why__subtitle {
-    max-width: 560px;
+    max-width: 638px;
     font-family: Mulish;
     font-size: 18px;
     margin-bottom: 120px;
   }
 
   .why__description {
-    width: 390px;
+    max-width: 460px;
+    width: 431px;
     font-family: Mulish;
   }
 
   .why__description--realtime {
-    width: 375px;
+    width: 423px;
   }
 
   .why__description--scale {
-    width: 355px;
+    width: 431px;
   }
 
   .why__description--privacy {
-    width: 387px;
+    width: 452px;
   }
 
   .why__description--timely {
-    width: 365px;
+    width: 430px;
   }
 
   .why__item {
@@ -419,11 +426,11 @@
   }
 
   .why__item-title--realtime {
-    width: 375px;
+    width: 423px;
   }
 
   .why__item-title--privacy {
-    width: 387px;
+    width: 452px;
   }
 
   .why__map--moderntech {

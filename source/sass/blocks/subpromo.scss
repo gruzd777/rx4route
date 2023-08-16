@@ -50,7 +50,7 @@
   height: 194px;
   background: #76E3D4;
   transform: rotate(-5deg);
-  z-index: 5;
+  z-index: 100;
 }
 
 .subpromo__card--second {
@@ -80,11 +80,11 @@
 }
 
 .subpromo__card-text--first {
-  width: 120px;
+  width: 124px;
 }
 
 .subpromo__card-text--second {
-  width: 185px;
+  width: 197px;
 }
 
 @media (min-width: $tablet) {
@@ -102,7 +102,7 @@
   .subpromo__text {
     margin: 0 auto 24px;
     text-align: center;
-    max-width: 460px;
+    max-width: 482px;
   }
 
   .subpromo__text--second {
@@ -126,7 +126,7 @@
     font-family: Mulish;
     font-size: 18px;
     line-height: 130%;
-    max-width: 465px;
+    max-width: 541px;
     text-align: left;
     margin: 0 0 24px 0;
   }
@@ -170,7 +170,7 @@
   }
 
   .subpromo__card-text--second {
-    width: 170px;
+    width: 215px;
   }
 
   .subpromo__icon--world {
