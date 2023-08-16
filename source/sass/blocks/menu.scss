@@ -40,3 +40,30 @@
     display: block;
   }
 }
+
+@media (min-width: $desktop) {
+  .menu {
+    transform: none;
+    height: auto;
+    width: 100%;
+    display: flex;
+  }
+
+  .menu__list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+
+  .menu__item {
+    margin: 0 24px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .menu__link--desk {
+    color: #8871f6;
+  }
+}

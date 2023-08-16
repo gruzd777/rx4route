@@ -47,3 +47,46 @@
     margin: 0 auto 48px;
   }
 }
+
+@media (min-width: $desktop) {
+  .test-drive {
+    padding: 106px 0;
+  }
+
+  .test-drive__title {
+    width: 480px;
+    margin: 0 0 24px 0;
+    text-align: left;
+  }
+
+  .test-drive__subtitle {
+    font-family: Mulish;
+    font-size: 18px;
+    line-height: 130%;
+    text-align: left;
+    margin: 0 0 24px 0;
+    max-width: 465px;
+  }
+
+  .test-drive__button {
+    width: 223px;
+    margin: 0;
+  }
+
+  .test-drive__block-1 {
+    margin-left: 48px;
+  }
+
+  .test-drive__flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .test-drive__img {
+    display: block;
+    width: 486px;
+    height: 403px;
+    margin-right: auto;
+  }
+}

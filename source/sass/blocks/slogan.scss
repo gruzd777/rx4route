@@ -48,3 +48,43 @@
     margin: 0 auto 64px;
   }
 }
+
+@media (min-width: $desktop) {
+  .slogan {
+    padding: 72px 0;
+  }
+
+  .slogan__block-1 {
+    margin-left: 20px;
+    padding-top: 103px;
+  }
+
+  .slogan__title {
+    margin: 0 0 24px 0;
+    text-align: left;
+  }
+
+  .slogan__subtitle {
+    text-align: left;
+    font-family: Mulish;
+    font-size: 18px;
+    max-width: 375px;
+    margin: 0 0 24px 0;
+  }
+
+  .slogan__button {
+    margin: 0;
+  }
+
+  .slogan img {
+    width: 652px;
+    height: 437px;
+    margin: 0;
+  }
+
+  .slogan__flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}
