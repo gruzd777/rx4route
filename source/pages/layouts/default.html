@@ -50,40 +50,46 @@
         {{> body }}
     </main>
     <footer class="page-footer" id="contacts">
-      <a class="page-footer__logo-link">
-        <img class="page-footer__logo" src="./img/logo.svg" alt="Logotype Rx4Route">
-      </a>
-      <p class="page-footer__text">Our platform is designed to streamline your business operations, saving you time and money.</p>
-      <nav class="page-footer__menu">
-        <div class="page-footer__menu-container">
-          <p class="page-footer__menu-title">Menu</p>
-          <ul class="page-footer__list">
-            <li class="page-footer__item">
-              <a href="#" class="page-footer__link">About us</a>
-            </li>
-            <li class="page-footer__item">
-              <a href="#" class="page-footer__link">How it works</a>
-            </li>
-            <li class="page-footer__item">
-              <a href="#" class="page-footer__link">Features</a>
-            </li>
-            <li class="page-footer__item">
-              <a href="#" class="page-footer__link">Contacts</a>
-            </li>
-          </ul>
+      <div class="container">
+        <div class="page-footer__flex-container">
+          <div class="page-footer__block-1">
+            <a class="page-footer__logo-link">
+              <img class="page-footer__logo" src="./img/logo.svg" alt="Logotype Rx4Route">
+            </a>
+            <p class="page-footer__text">Our platform is designed to streamline your business operations, saving you time and money.</p>
+          </div>
+          <nav class="page-footer__menu">
+            <div class="page-footer__menu-container">
+              <p class="page-footer__menu-title">Menu</p>
+              <ul class="page-footer__list">
+                <li class="page-footer__item">
+                  <a href="#" class="page-footer__link">About us</a>
+                </li>
+                <li class="page-footer__item">
+                  <a href="#" class="page-footer__link">How it works</a>
+                </li>
+                <li class="page-footer__item">
+                  <a href="#" class="page-footer__link">Features</a>
+                </li>
+                <li class="page-footer__item">
+                  <a href="#" class="page-footer__link">Contacts</a>
+                </li>
+              </ul>
+            </div>
+            <div class="page-footer__menu-container">
+              <p class="page-footer__menu-title">Contacts</p>
+              <address>
+                <a class="page-footer__address-link" href="mailto:info@rx4route.com" aria-label="Write to us">info@rx4route.com</a>
+                <a class="page-footer__address-link" href="tel:+14540000000">+1 (454) 000 00 00</a>
+                <p class="page-footer__address">
+                  248 Bridge St, Metuchen, NJ 08840
+                </p>
+              </address>
+            </div>
+          </nav>
         </div>
-        <div class="page-footer__menu-container">
-          <p class="page-footer__menu-title">Contacts</p>
-          <address>
-            <a class="page-footer__address-link" href="mailto:info@rx4route.com" aria-label="Write to us">info@rx4route.com</a>
-            <a class="page-footer__address-link" href="tel:+14540000000">+1 (454) 000 00 00</a>
-            <p class="page-footer__address">
-              248 Bridge St, Metuchen, NJ 08840
-            </p>
-          </address>
-        </div>
-      </nav>
-      <p class="page-footer__copyright">All rights reserved (c) 2023 Rx4Route LLC.</p>
+        <p class="page-footer__copyright">All rights reserved (c) 2023 Rx4Route LLC.</p>
+      </div>
     </footer>
     <script src="./vendor/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>

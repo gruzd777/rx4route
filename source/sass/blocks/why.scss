@@ -369,7 +369,7 @@
 
 @media (min-width: $desktop) {
   .why {
-    padding: 180px 0;
+    padding: 180px 0 70px 0;
   }
 
   .why__title {
@@ -396,9 +396,21 @@
     width: 355px;
   }
 
+  .why__description--privacy {
+    width: 387px;
+  }
+
+  .why__description--timely {
+    width: 365px;
+  }
+
   .why__item {
     position: relative;
     margin-bottom: 268px;
+  }
+
+  .why__item--scale {
+    margin-bottom: 420px;
   }
 
   .why__item-title {
@@ -408,6 +420,10 @@
 
   .why__item-title--realtime {
     width: 375px;
+  }
+
+  .why__item-title--privacy {
+    width: 387px;
   }
 
   .why__map--moderntech {
@@ -423,6 +439,18 @@
   }
 
   .why__map--scale {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .why__map--privacy {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .why__map--timely {
     position: absolute;
     top: 0;
     right: 0;
