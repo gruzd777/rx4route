@@ -1,8 +1,12 @@
 .subpromo-slider {
-  background:#190C39 url('../img/elips.png') no-repeat center bottom;
-  background-size: contain;
   color: $basic_white;
   padding-bottom: 50px;
+}
+
+.subpromo-slider__block {
+  height: 437px;
+  background: url("../img/elips.png") no-repeat center top;
+  background-size: contain;
 }
 
 .subpromo-slider__title {
@@ -17,18 +21,24 @@
   width: 160px;
 }
 
-.subpromo__logo {
-
-}
+.subpromo__logo {}
 
 @media (min-width: $tablet) {
   .subpromo-slider {
-    background: #190C39 url("../img/elipse-tablet.png") no-repeat center bottom;
-    background-size: contain;
+    padding-bottom: 0;
+  }
+
+  .subpromo-slider__block {
+    height: 460px;
+    background: url("../img/elipse-tablet.png") no-repeat center top;
+    background-size: cover;
+    padding-top: 71px;
+    box-sizing: border-box;
   }
 
   .subpromo-slider__title {
     max-width: 542px;
+    margin: 0 auto;
   }
 
   .subpromo__logo-link {
@@ -42,11 +52,27 @@
 }
 
 @media (min-width: $desktop) {
-  .subpromo-slider {
-    background: #190C39 url("../img/ellipse-desk.png") no-repeat center bottom;
+  .subpromo-slider {}
+
+  .subpromo-slider__block {
+    height: 1228px;
+    background: url("../img/ellipse-desk.png") no-repeat center center;
+    background-size: cover;
+    position: relative;
+    padding-top: 117px;
   }
 
   .subpromo-slider__title {
-    max-width: 880px;
+    max-width: 950px;
+  }
+
+  .subpromo__logo-link {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    z-index: 5;
+    width: 336px;
+    height: 80px;
   }
 }
