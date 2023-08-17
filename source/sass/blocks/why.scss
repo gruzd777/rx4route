@@ -57,6 +57,25 @@
   max-width: 382px;
 }
 
+.why__pic-driver {
+  display: inline-block;
+  position: absolute;
+  width: 228px;
+  height: 125px;
+  top: 13px;
+  right: -38px;
+}
+
+.why__pic-time {
+  display: inline-block;
+  position: absolute;
+  left: -17px;
+  bottom: -45px;
+  width: 141px;
+  height: 157px;
+}
+
+
 .why__pic-widgets {
   width: 260px;
   height: 194px;
@@ -308,6 +327,20 @@
     max-width: 648px;
   }
 
+  .why__pic-driver {
+    width: 362px;
+    height: 198px;
+    top: 29px;
+    right: -103px;
+  }
+
+  .why__pic-time {
+    width: 293px;
+    height: 336px;
+    bottom: -136px;
+    left: -52px;
+  }
+
   .why__pic-widgets {
     width: 465px;
     height: 367px;
@@ -463,4 +496,13 @@
     right: 0;
   }
 
+  .why__pic-driver {
+    top: -4px;
+    right: -124px;
+  }
+
+  .why__pic-time {
+    bottom: -158px;
+    left: -50px;
+  }
 }
