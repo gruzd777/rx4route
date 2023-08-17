@@ -270,6 +270,16 @@
     animation: out 6s ease infinite;
   }
 
+  .softs__in::before {
+    width: 16px;
+    height: 16px;
+  }   
+  
+  .softs__out::before {
+    width: 16px;
+    height: 16px;
+  }     
+
   .softs__center {
     font-size: 22px;
     width: 223px;
@@ -288,6 +298,22 @@
   .softs__item--your {
     top: -18px;
     left: 542px;
+
+    & .softs__in {
+      left: calc(50% + 37px);
+
+      &::before {
+        left: -32px;
+      }
+    }
+
+    & .softs__out {
+      right: calc(50% + 24px);
+
+      &::before {
+        right: -21px;
+      }
+    }
   }
 
   .softs__item--datascan {
@@ -303,10 +329,20 @@
     & .softs__in {
       left: calc(50% + 0px);
       margin-top: -118px;
+
+      &::before {
+        left: -25px;
+        top: 9px;
+      }
     }
 
     & .softs__out {
       right: calc(50% + 2px);
+
+      &::before {
+        right: -24px;
+        top: 26px;
+      }
     }
 
     & .softs__link {
@@ -337,10 +373,22 @@
     & .softs__in {
       left: calc(50% + 0px);
       margin-top: 116px;
+
+      &::before {
+        left: unset;
+        top: 12px;
+        right: -33px;
+      }
     }
 
     & .softs__out {
       right: calc(50% - 1px);
+
+      &::before {
+        right: unset;
+        top: 40px;
+        left: -10px;
+      }
     }
 
     & .softs__link {
@@ -366,16 +414,25 @@
     & .softs__block {
       height: 228px;
       bottom: 17px;
-  
     }
 
     & .softs__in {
       left: calc(50% + 35px);
       margin-top: 0px;
+
+      &::before {
+        left: unset;
+        right: -30px;
+      }
     }
 
     & .softs__out {
       right: calc(50% + 25px);
+
+      &::before {
+        right: unset;
+        left: -22px;
+      }      
     }    
 
     & .softs__link {
@@ -400,6 +457,32 @@
     top: 506px;
     left: 144px;
 
+    & .softs__block {
+      height: 228px;
+      bottom: -40px;
+    }
+
+    & .softs__in {
+      left: calc(50% + 2px);
+      margin-top: -126px;
+
+      &::before {
+        left: unset;
+        right: -27px;
+        top: 30px;
+      }
+    }
+
+    & .softs__out {
+      right: calc(50% - 1px);
+
+      &::before {
+        right: unset;
+        left: -27px;
+        top: 9px;
+      }      
+    }    
+
     & .softs__link {
       transform: rotate(118deg);
       top: -7px;
@@ -419,6 +502,20 @@
     transform: rotate(-61deg);
     top: 132px;
     left: 148px;
+
+    & .softs__block {
+      height: 228px;
+      bottom: 64px;
+    }
+
+    & .softs__in {
+      left: calc(50% + 2px);
+      margin-top: 77px;
+    }
+
+    & .softs__out {
+      right: calc(50% - 1px);
+    }        
 
     & .softs__link {
       transform: rotate(61deg);
