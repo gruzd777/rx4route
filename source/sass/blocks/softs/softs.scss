@@ -262,14 +262,6 @@
     display: none;
   }
 
-  .softs__item .softs__in {
-    animation: in 6s ease infinite;
-  }
-
-  .softs__item .softs__out {
-    animation: out 6s ease infinite;
-  }
-
   .softs__in::before {
     width: 16px;
     height: 16px;
@@ -298,12 +290,14 @@
     height: 135%;
   }
 
+
   .softs__item--your {
     top: -18px;
     left: 542px;
 
     & .softs__in {
       left: calc(50% + 37px);
+      animation: in 5s ease infinite;
 
       &::before {
         left: -32px;
@@ -312,6 +306,7 @@
 
     & .softs__out {
       right: calc(50% + 24px);
+      animation: out 5s ease infinite;
 
       &::before {
         right: -21px;
@@ -330,8 +325,10 @@
     }
 
     & .softs__in {
+      transform: rotate(-61deg);
       left: calc(50% + 0px);
       margin-top: -118px;
+      animation: in 8s ease infinite;
 
       &::before {
         left: -25px;
@@ -340,7 +337,9 @@
     }
 
     & .softs__out {
+      transform: rotate(-61deg);
       right: calc(50% + 2px);
+      animation: out 8s ease infinite;
 
       &::before {
         right: -24px;
@@ -352,14 +351,6 @@
       transform: rotate(-61deg);
       top: -17px;
       left: -30px;
-    }
-
-    & .softs__in {
-      transform: rotate(-61deg);
-    }
-
-    & .softs__out {
-      transform: rotate(-61deg);
     }
   }
 
@@ -374,8 +365,10 @@
     }
 
     & .softs__in {
+      transform: rotate(-118deg);
       left: calc(50% + 0px);
       margin-top: 116px;
+      animation: in 7s ease infinite;
 
       &::before {
         left: unset;
@@ -385,7 +378,9 @@
     }
 
     & .softs__out {
+      transform: rotate(-118deg);
       right: calc(50% - 1px);
+      animation: out 7s ease infinite;
 
       &::before {
         right: unset;
@@ -398,14 +393,6 @@
       transform: rotate(-118deg);
       top: 1px;
       left: -8px;
-    }
-
-    & .softs__in {
-      transform: rotate(-118deg);
-    }
-
-    & .softs__out {
-      transform: rotate(-118deg);
     }
   }
 
@@ -420,8 +407,10 @@
     }
 
     & .softs__in {
+      transform: rotate(-180deg);
       left: calc(50% + 35px);
       margin-top: 0px;
+      animation: in 3s ease infinite;
 
       &::before {
         left: unset;
@@ -430,7 +419,9 @@
     }
 
     & .softs__out {
+      transform: rotate(-180deg);
       right: calc(50% + 25px);
+      animation: out 3s ease infinite;
 
       &::before {
         right: unset;
@@ -445,14 +436,6 @@
       width: 226px;
       height: 98px;
     }
-
-    & .softs__in {
-      transform: rotate(-180deg);
-    }
-
-    & .softs__out {
-      transform: rotate(-180deg);
-    }
   }
 
   .softs__item--pioneerrx {
@@ -466,8 +449,10 @@
     }
 
     & .softs__in {
+      transform: rotate(118deg);
       left: calc(50% + 2px);
       margin-top: -126px;
+      animation: in 6s ease infinite;
 
       &::before {
         left: unset;
@@ -477,7 +462,9 @@
     }
 
     & .softs__out {
+      transform: rotate(118deg);
       right: calc(50% - 1px);
+      animation: out 6s ease infinite;
 
       &::before {
         right: unset;
@@ -490,14 +477,6 @@
       transform: rotate(118deg);
       top: -7px;
       left: -46px;
-    }
-
-    & .softs__in {
-      transform: rotate(118deg);
-    }
-
-    & .softs__out {
-      transform: rotate(118deg);
     }
   }
 
@@ -512,8 +491,10 @@
     }
 
     & .softs__in {
+      transform: rotate(61deg);
       left: calc(50% + 16px);
       margin-top: 100px;
+      animation: in 9s ease infinite;
 
       &::before {
         top: 46px;
@@ -522,7 +503,9 @@
     }
 
     & .softs__out {
+      transform: rotate(61deg);
       right: calc(50% - 1px);
+      animation: out 9s ease infinite;
 
       &::before {
         top: 4px;
@@ -534,14 +517,6 @@
       transform: rotate(61deg);
       top: -13px;
       left: -13px;
-    }
-
-    & .softs__in {
-      transform: rotate(61deg);
-    }
-
-    & .softs__out {
-      transform: rotate(61deg);
     }
   }
 }
