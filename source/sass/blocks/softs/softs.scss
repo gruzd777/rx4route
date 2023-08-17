@@ -273,12 +273,12 @@
   .softs__in::before {
     width: 16px;
     height: 16px;
-  }   
-  
+  }
+
   .softs__out::before {
     width: 16px;
     height: 16px;
-  }     
+  }
 
   .softs__center {
     font-size: 22px;
@@ -289,11 +289,14 @@
   .softs__link {
     width: 203px;
     height: 86px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
   }
 
-  // .softs__in {
-  //   left: calc(50% + 4px);
-  // }
+  .softs__logo {
+    height: 135%;
+  }
 
   .softs__item--your {
     top: -18px;
@@ -432,8 +435,8 @@
       &::before {
         right: unset;
         left: -22px;
-      }      
-    }    
+      }
+    }
 
     & .softs__link {
       transform: rotate(-180deg);
@@ -480,8 +483,8 @@
         right: unset;
         left: -27px;
         top: 9px;
-      }      
-    }    
+      }
+    }
 
     & .softs__link {
       transform: rotate(118deg);
@@ -509,13 +512,23 @@
     }
 
     & .softs__in {
-      left: calc(50% + 2px);
-      margin-top: 77px;
+      left: calc(50% + 16px);
+      margin-top: 100px;
+
+      &::before {
+        top: 46px;
+        left: -27px;
+      }
     }
 
     & .softs__out {
       right: calc(50% - 1px);
-    }        
+
+      &::before {
+        top: 4px;
+        right: -20px;
+      }
+    }
 
     & .softs__link {
       transform: rotate(61deg);
