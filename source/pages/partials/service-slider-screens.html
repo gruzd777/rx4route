@@ -1,23 +1,47 @@
 {{#each global.slider}}
-  <li class="service-slider__item">
-    <div class="swiper slider">
-      <ul class="slider__container slider__pharmacies swiper-wrapper">
-        {{#each screen}}
-          <li class="slider__item slider-item swiper-slide">
-            <div class="slider-item__description slider-item__description--{{background}}">
-              <h4 class="slider-item__title title-4">{{description-title}}</h4>
-              <p class="slider-item__text">{{description-text}}</p>
-            </div>
-            <div class="slider-item__picture">
-              <picture>
-                <source type="image/webp" srcset="./img/{{img-mob}}.webp 1x, ./img/{{img-mob}}@2x.webp 2x">
-                <img class="slider-item__pic" src="./img/{{img-mob}}.jpg" srcset="./img/{{img-mob}}@2x.jpg 2x" alt="{{description-title}}">
-              </picture>
-            </div>
-          </li>
-        {{/each}}
-      </ul>
-      <div class="pagination pagination__slider-phar swiper__pagination"></div>
-    </div>
-  </li>
+<li class="service-slider__item">
+  {{#ifequal stype "simple"}}
+  <div class="simple-swiper swiper slider">
+    <ul class="slider__container slider__pharmacies swiper-wrapper">
+      {{#each screen}}
+      <li class="slider__item slider-item swiper-slide">
+        <div class="slider-item__description slider-item__description--{{background}}">
+          <h4 class="slider-item__title title-4">{{description-title}}</h4>
+          <p class="slider-item__text">{{description-text}}</p>
+        </div>
+        <div class="slider-item__picture">
+          <picture>
+            <source type="image/webp" srcset="./img/{{img-mob}}.webp 1x, ./img/{{img-mob}}@2x.webp 2x">
+            <img class="slider-item__pic" src="./img/{{img-mob}}.jpg" srcset="./img/{{img-mob}}@2x.jpg 2x"
+              alt="{{description-title}}">
+          </picture>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+    <div class="pagination pagination__slider-phar swiper__pagination"></div>
+  </div>
+  {{else}}
+  <div class="phone-swiper swiper slider">
+    <ul class="slider__container swiper-wrapper">
+      {{#each screen}}
+      <li class="slider__item slider-item swiper-slide">
+        <!-- <div class="slider-item__description slider-item__description--{{background}}">
+          <h4 class="slider-item__title title-4">{{description-title}}</h4>
+          <p class="slider-item__text">{{description-text}}</p>
+        </div> -->
+        <div class="slider-item__picture">
+          <picture>
+            <source type="image/webp" srcset="./img/{{img-mob}}.webp 1x, ./img/{{img-mob}}@2x.webp 2x">
+            <img class="slider-item__pic" src="./img/{{img-mob}}.jpg" srcset="./img/{{img-mob}}@2x.jpg 2x"
+              alt="{{description-title}}">
+          </picture>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+    <div class="pagination pagination__slider-phar swiper__pagination"></div>
+  </div>
+  {{/ifequal}}
+</li>
 {{/each}}
