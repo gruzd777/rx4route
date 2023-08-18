@@ -51,7 +51,6 @@ serviceFeaturesButtonContainer.addEventListener('click', (e) => {
       'service-slider__item--active',
       'service-slider__item'
     );
-    // moveMenu();
   }
 });
 
