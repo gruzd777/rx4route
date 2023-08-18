@@ -1,9 +1,18 @@
 .service-slider__item {
-  display: none;
+  // display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 0;
 }
 
 .service-slider__item--active {
-  display: block;
+  // display: block;
+  opacity: 1;
+  position: relative;
+  z-index: 5;
 }
 
 // .service-slider__item:nth-child(1) {

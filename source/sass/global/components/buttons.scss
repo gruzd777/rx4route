@@ -58,12 +58,14 @@
   line-height: 21px;
   color: rgba(23, 23, 23, 0.6);
   border-radius: 12px;
+  background-color: rgba(136, 113, 246, 0);
+  transition: background-color 1s ;
 
   &:hover {
     color: #171717;
   }
   &.active {
-    background-color: #8871F6;
+    background-color: rgba(136, 113, 246, 1);
     color: #ffffff;
   }
 }

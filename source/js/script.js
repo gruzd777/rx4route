@@ -51,11 +51,11 @@ serviceFeaturesButtonContainer.addEventListener('click', (e) => {
       'service-slider__item--active',
       'service-slider__item'
     );
-    moveMenu();
+    // moveMenu();
   }
 });
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.simple-swiper', {
   slidesPerView: 1,
   pagination: {
     el: '.swiper__pagination',
@@ -63,6 +63,17 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
+
+const phoneSwiper = new Swiper(".phone-swiper", {
+  spaceBetween: 1,
+  slidesPerView: 3,
+  centeredSlides: true,
+  roundLengths: true,
+  loopAdditionalSlides: 30,
+  pagination: {
+    el: ".swiper__pagination",
+  },
+});
 if (document.querySelector('.hoist')) {
   const callback = (entry) => {
     entry.forEach(change => {
