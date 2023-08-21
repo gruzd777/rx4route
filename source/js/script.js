@@ -68,6 +68,7 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
 
   const swiper = new Swiper('.simple-swiper', {
     slidesPerView: 1,
+    loop: true,
     observer: true,
     observeParents: true,
     pagination: {
@@ -75,20 +76,11 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     },
   });
 
-
   const swiperPhonesList = new Swiper('.phone-swiper', {
     centeredSlides: true,
     loop: true,
     speed: 500,
-    // slidesPerView: 2,
     spaceBetween: 20,
-    // autoplay: {
-    //     delay: 3000,
-    // },
-    // navigation: {
-    //     nextEl: '.swiper-button-next',
-    //     prevEl: '.swiper-button-prev',
-    // },
     pagination: {
       el: '.swiper__pagination',
     },
@@ -109,10 +101,8 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
         slidesPerView: 3,
       },
     },
-    //   controller: {
-    //     control: swiperTexts
-    //   }
   });
+
   const phoneTextList = document.querySelectorAll('.phone-texts');
   phoneTextList.forEach((item) => {
     item.querySelector('.phone-texts__item').classList.add('phone-texts__item--active');
@@ -120,15 +110,27 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
 
   swiperPhonesList.forEach((item) => {
     item.on('slideChange', () => {
-      console.log('---   ', item.realIndex);
-      console.log('!!!  ', item.el.dataset.text)
       const texts = document.querySelectorAll(`.${item.el.dataset.text} .phone-texts__item`);
       if (document.querySelector(`.${item.el.dataset.text} .phone-texts__item--active`)) {
         document.querySelector(`.${item.el.dataset.text} .phone-texts__item--active`).classList.remove('phone-texts__item--active');
       }
       Array.from(texts)[item.realIndex].classList.add('phone-texts__item--active')
     });
-  })
+  });
+
+  const simpleTextList = document.querySelectorAll('.simple-texts');
+  simpleTextList.forEach((item) => {
+    item.querySelector('.simple-texts__description').classList.add('simple-texts__description--active');
+  });
+
+  swiper.on('slideChange', () => {
+      const texts = document.querySelectorAll(`.${swiper.el.dataset.text} .simple-texts__description`);
+      if (document.querySelector(`.${swiper.el.dataset.text} .simple-texts__description--active`)) {
+        document.querySelector(`.${swiper.el.dataset.text} .simple-texts__description--active`).classList.remove('simple-texts__description--active');
+      }
+      Array.from(texts)[swiper.realIndex].classList.add('simple-texts__description--active');
+    });
+
 }
 
 

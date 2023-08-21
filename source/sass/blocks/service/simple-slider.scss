@@ -1,0 +1,21 @@
+.simple-slider {
+    margin: 0 16px;
+    overflow: hidden;
+
+    @media (min-width: $desktop) {
+        overflow: visible;
+        position: relative;
+    }
+  }
+  
+  .simple-slider__text-block {
+    margin: 0 0 9px;
+  }
+  
+  .simple-slider__swiper {}
+  
+//   .simple-slider__pagination{
+//     position: absolute;
+//     bottom: -22px !important;
+//     right: 0;
+//   }
