@@ -78,7 +78,10 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     keyboard: {
       enabled: true,
       onlyInViewport: false
-    }
+    },
+    mousewheel: {
+      releaseOnEdges: true,
+    },
   });
 
   const swiperPhonesList = new Swiper('.phone-swiper', {
@@ -95,6 +98,9 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     keyboard: {
       enabled: true,
       onlyInViewport: false
+    },
+    mousewheel: {
+      releaseOnEdges: true,
     },
     breakpoints: {
 
