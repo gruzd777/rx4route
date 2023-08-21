@@ -114,7 +114,10 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
       if (document.querySelector(`.${item.el.dataset.text} .phone-texts__item--active`)) {
         document.querySelector(`.${item.el.dataset.text} .phone-texts__item--active`).classList.remove('phone-texts__item--active');
       }
-      Array.from(texts)[item.realIndex].classList.add('phone-texts__item--active')
+      Array.from(texts)[item.realIndex].classList.add('phone-texts__item--active');
+      const color = Array.from(texts)[item.realIndex].dataset.color;
+      item.el.classList.remove('phone-swiper--violet', 'phone-swiper--pistachios', 'phone-swiper--sky');
+      item.el.classList.add(`phone-swiper--${color}`);
     });
   });
 
