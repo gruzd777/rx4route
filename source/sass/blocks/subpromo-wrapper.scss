@@ -1,7 +1,8 @@
 .subpromo-wrapper {
   border-radius: 40px;
   overflow: hidden;
-  background: #190c39 url('../img/background-spot-light-414.svg') no-repeat 0 0;
+  // background: #190c39 url('../img/background-spot-light-414.svg') no-repeat 0 0;
+  background: #190c39;
   background-size: cover;
 }
 
@@ -12,10 +13,10 @@
 //   }
 // }
 
-@media (min-width: $desktop) {
-  .subpromo-wrapper {
-    background: #190c39 url("../img/subpromo-background-t.jpg") no-repeat 0 0;
-    background-size: cover;
-    border-radius: 95px;
-  }
-}
+// @media (min-width: $desktop) {
+//   .subpromo-wrapper {
+//     background: #190c39 url("../img/subpromo-background-t.jpg") no-repeat 0 0;
+//     background-size: cover;
+//     border-radius: 95px;
+//   }
+// }
