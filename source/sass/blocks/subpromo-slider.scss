@@ -5,8 +5,19 @@
 
 .subpromo-slider__block {
   height: 437px;
-  background: url("../img/elips.png") no-repeat center top;
-  background-size: contain;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 760px;
+    height: 760px;
+    position: absolute;
+    top: -58px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("../img/circle-bg.png") no-repeat 0 0;
+    background-size: cover;
+  }
 }
 
 .subpromo-slider__title {
@@ -30,10 +41,13 @@
 
   .subpromo-slider__block {
     height: 460px;
-    background: url("../img/elipse-tablet.png") no-repeat center top;
-    background-size: cover;
     padding-top: 71px;
     box-sizing: border-box;
+    &::before {
+      width: 760px;
+      height: 760px;
+      top: 4px;
+    }
   }
 
   .subpromo-slider__title {
@@ -56,10 +70,14 @@
 
   .subpromo-slider__block {
     height: 1228px;
-    background: url("../img/ellipse-desk.png") no-repeat center center;
-    background-size: cover;
     position: relative;
     padding-top: 117px;
+
+    &::before {
+      width: 1228px;
+      height: 1228px;
+      top: 4px;
+    }
   }
 
   .subpromo-slider__title {
