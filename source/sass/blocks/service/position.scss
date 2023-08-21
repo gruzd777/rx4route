@@ -1,16 +1,22 @@
 .position {}
 
 .position--left-bottom {
+  @media (min-width: $desktop) {
     left: -20px;
     bottom: -20px;
+  }
 }
 
 .position--right-bottom {
+  @media (min-width: $desktop) {
     right: -14px;
     bottom: 30px;
+  }
 }
 
 .position--right-middle {
-    right: -60px;
+  @media (min-width: $desktop) {
+    right: -14px;
     bottom: 108px;
+  }
 }

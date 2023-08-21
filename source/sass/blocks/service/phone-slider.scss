@@ -1,6 +1,11 @@
 .phone-slider {
   margin: 0 16px;
   overflow: hidden;
+
+  @media (min-width: $desktop) {
+    overflow: visible;
+    position: relative;
+  }
 }
 
 .phone-slider__text-block {
@@ -9,7 +14,7 @@
 
 .phone-slider__swiper {}
 
-.phone-slider__pagination{
+.phone-slider__pagination {
   position: absolute;
   bottom: -22px !important;
   right: 0;
