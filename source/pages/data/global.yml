@@ -23,6 +23,7 @@ slider:
         img-mob: slide-features/pharmacies/driver-management-1
         background: pistachios
   - 
+    texts: text-first
     screen:
       -
         description-title: Simplified Route Navigation
@@ -50,6 +51,7 @@ slider:
         img-mob: slide-features/drivers/phones/phone-efficient-route-planning
         background: violet
   -
+    texts: text-second
     screen:
       -
         description-title: Customer Communication

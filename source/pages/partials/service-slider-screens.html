@@ -23,7 +23,7 @@
   </div>
   {{else}}
   <div class="phone-slider">
-    <ul class="phone-slider__text-block phone-texts">
+    <ul class="phone-slider__text-block phone-texts {{texts}}">
       {{#each screen}}
       <li class="phone-texts__item phone-texts__item--{{background}}">
         <h4 class="phone-texts__title title-4">{{description-title}}</h4>
@@ -31,7 +31,7 @@
       </li>
       {{/each}}
     </ul>
-    <div class="phone-slider__swiper phone-swiper ">
+    <div class="phone-slider__swiper phone-swiper" data-text="{{texts}}">
       <div class="phone-swiper__wrapper swiper-wrapper">
         {{#each screen}}
         <div class="swiper-slide phone-swiper__slide">
