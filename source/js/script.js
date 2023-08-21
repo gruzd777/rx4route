@@ -73,7 +73,12 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     observeParents: true,
     pagination: {
       el: '.swiper__pagination',
+      clickable: true
     },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false
+    }
   });
 
   const swiperPhonesList = new Swiper('.phone-swiper', {
@@ -83,9 +88,14 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     spaceBetween: 20,
     pagination: {
       el: '.swiper__pagination',
+      clickable: true
     },
     observer: true,
     observeParents: true,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false
+    },
     breakpoints: {
 
       10: {
