@@ -78,6 +78,7 @@
   @media(min-width: $desktop-middle) {
     width: 300px;
     overflow: visible;
+    z-index: 20;
   }
 
 }

@@ -1,9 +1,12 @@
 .phone-swiper {
   width: 100%;
   padding: 80px 0;
-  /* background: red; */
   background: #b9f8ec;
   border-radius: 30px;
+
+  @media (min-width: $desktop) {
+    overflow: hidden;
+  }
 }
 
 .phone-swiper__wrapper {}
@@ -11,18 +14,15 @@
 .phone-swiper__slide {
   overflow: hidden;
   transition: all .7s;
-  /* transform: scale(0.9);  */
   background-color: #ffffff;
   border-radius: 20px;
-  box-shadow:1px 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .phone-swiper__slide.swiper-slide-active {
   opacity: 1;
   z-index: 1;
-  /* transform: scale(1.5); */
   transform: translateY(-4px) scale(1.1);
-  /* margin: 0 -60px; */
   box-shadow: 5px 10px 13px rgba(0, 0, 0, 0.3);
   margin: 0 !important;
 }
