@@ -73,6 +73,14 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     observeParents: true,
     pagination: {
       el: '.swiper__pagination',
+      clickable: true
+    },
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false
+    },
+    mousewheel: {
+      releaseOnEdges: true,
     },
   });
 
@@ -83,9 +91,17 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     spaceBetween: 20,
     pagination: {
       el: '.swiper__pagination',
+      clickable: true
     },
     observer: true,
     observeParents: true,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: false
+    },
+    mousewheel: {
+      releaseOnEdges: true,
+    },
     breakpoints: {
 
       10: {
