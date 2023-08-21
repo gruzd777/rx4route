@@ -63,16 +63,49 @@ const swiper = new Swiper('.simple-swiper', {
 });
 
 
-const phoneSwiper = new Swiper(".phone-swiper", {
-  spaceBetween: 1,
-  slidesPerView: 3,
+const swiperPhones1 = new Swiper('.phone-swiper', {
   centeredSlides: true,
-  roundLengths: true,
-  loopAdditionalSlides: 30,
-  pagination: {
-    el: ".swiper__pagination",
+  loop: true,
+  speed: 500,
+  slidesPerView: 1.5,
+  spaceBetween: 20,
+  // autoplay: {
+  //     delay: 3000,
+  // },
+  // navigation: {
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  // },
+  breakpoints: {
+
+      10: {
+          slidesPerView: 3,
+      },
+      768: {
+          slidesPerView: 3,
+      },
+      1080: {
+          slidesPerView: 3.25,
+      },
+      1280: {
+          slidesPerView: 3.75,
+      },
   },
+//   controller: {
+//     control: swiperTexts
+//   }
 });
+
+document.querySelector('.phone-texts__item').classList.add('phone-texts__item--active');
+const texts = document.querySelectorAll('.phone-texts__item');
+
+swiperPhones1[0].on('slideChange', () => {
+console.log('---   ', swiperPhones1[0].realIndex);
+document.querySelector('.phone-texts__item--active').classList.remove('phone-texts__item--active');
+Array.from(texts)[swiperPhones1[0].realIndex].classList.add('phone-texts__item--active')
+});
+
+
 if (document.querySelector('.hoist')) {
   const callback = (entry) => {
     entry.forEach(change => {
