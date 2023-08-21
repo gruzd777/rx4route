@@ -1,0 +1,53 @@
+.phone-texts {
+  position: relative;
+}
+
+.phone-texts__item {
+  padding: 26px 26px 37px;
+  border-radius: 18px;
+  margin-bottom: 9px;
+  background: #b9f8ec;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 200px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 0;
+    transition: all 1s;
+
+  @media(min-width: $desktop-middle) {
+    position: absolute;
+    right: 12px;
+    bottom: 50px;
+    width: 336px;
+  }
+}
+
+.phone-texts__item--active {
+  opacity: 1;
+  z-index: 10;
+  position: relative;
+}
+
+.phone-texts__item--sky {
+  background-color: #d8ebfd;
+}
+
+.phone-texts__item--pistachios {
+  background-color: #b9f8ec;;
+}
+
+.phone-texts__item--violet {
+  background-color: #e8d5fc;
+}
+
+.slider-item__title {
+  margin-bottom: 16px;
+}
+
+.phone-texts__title {
+  margin-bottom: 16px;
+}

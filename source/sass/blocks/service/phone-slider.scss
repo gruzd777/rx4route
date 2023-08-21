@@ -1,18 +1,16 @@
-.phone-swiper {
-  width: 90%;
+.phone-slider {
+  margin: 0 16px;
   overflow: hidden;
 }
 
-.phone-swiper .slider-item {
-  margin: 0 -40px;
-  padding: 0;
-  z-index: 5;
-  transition: all 1s;
-  transform: scale(0.8);
+.phone-slider__text-block {
+  margin: 0 0 9px;
 }
 
-.phone-swiper .swiper-slide-active {
-  z-index: 10;
-  transform: scale(1);
-  box-shadow: rgb(204 204 204) 3px 4px 10px;
+.phone-slider__swiper {}
+
+.phone-slider__pagination{
+  position: absolute;
+  bottom: -22px !important;
+  right: 0;
 }

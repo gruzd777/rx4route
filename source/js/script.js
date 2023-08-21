@@ -10,7 +10,10 @@ const serviceFeaturesScreen = document.querySelector('.service-slider__item');
 
 const firstSoft = document.querySelector('.softs__item');
 const softs = document.querySelectorAll('.softs__item');
-firstSoft.classList.add('softs__item--active');
+
+if (firstSoft) {
+  firstSoft.classList.add('softs__item--active');
+}
 
 setInterval(() => {
   const activeSoft = document.querySelector('.softs__item--active');
@@ -20,7 +23,10 @@ setInterval(() => {
   Array.from(softs)[newIndex].classList.add('softs__item--active');
 }, 6000);
 
-serviceFeaturesScreen.classList.add('service-slider__item--active');
+if (serviceFeaturesScreen) {
+  serviceFeaturesScreen.classList.add('service-slider__item--active');
+}
+
 
 const setActive = (element, classNameActive, classNameBase) => {
   document.querySelector(`.${classNameBase}.${classNameActive}`).classList.remove(classNameActive);
@@ -43,36 +49,91 @@ const moveMenu = () => {
   });
 };
 
-serviceFeaturesButtonContainer.addEventListener('click', (e) => {
-  if (e.target.classList.contains('service-features__button')) {
-    setActive(e.target, 'active', 'service-features__button');
-    setActive(
-      Array.from(serviceFeaturesScreens)[Array.from(serviceFeaturesButtons).indexOf(e.target)],
-      'service-slider__item--active',
-      'service-slider__item'
-    );
-  }
-});
 
-const swiper = new Swiper('.simple-swiper', {
-  slidesPerView: 1,
-  pagination: {
-    el: '.swiper__pagination',
-    slidesPerView: 1
-  },
-});
+if (serviceFeaturesButtonContainer) {
+  serviceFeaturesButtonContainer.addEventListener('click', (e) => {
+    if (e.target.classList.contains('service-features__button')) {
+      setActive(e.target, 'active', 'service-features__button');
+      setActive(
+        Array.from(serviceFeaturesScreens)[Array.from(serviceFeaturesButtons).indexOf(e.target)],
+        'service-slider__item--active',
+        'service-slider__item'
+      );
+    }
+  });
+}
 
 
-const phoneSwiper = new Swiper(".phone-swiper", {
-  spaceBetween: 1,
-  slidesPerView: 3,
-  centeredSlides: true,
-  roundLengths: true,
-  loopAdditionalSlides: 30,
-  pagination: {
-    el: ".swiper__pagination",
-  },
-});
+if (document.querySelector('.phone-swiper') || document.querySelector('.simple-swiper')) {
+
+  const swiper = new Swiper('.simple-swiper', {
+    slidesPerView: 1,
+    observer: true,
+    observeParents: true,
+    pagination: {
+      el: '.swiper__pagination',
+    },
+  });
+
+
+  const swiperPhonesList = new Swiper('.phone-swiper', {
+    centeredSlides: true,
+    loop: true,
+    speed: 500,
+    // slidesPerView: 2,
+    spaceBetween: 20,
+    // autoplay: {
+    //     delay: 3000,
+    // },
+    // navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    // },
+    pagination: {
+      el: '.swiper__pagination',
+    },
+    observer: true,
+    observeParents: true,
+    breakpoints: {
+
+      10: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1080: {
+        slidesPerView: 3,
+      },
+      1280: {
+        slidesPerView: 3,
+      },
+    },
+    //   controller: {
+    //     control: swiperTexts
+    //   }
+  });
+  const phoneTextList = document.querySelectorAll('.phone-texts');
+  phoneTextList.forEach((item) => {
+    item.querySelector('.phone-texts__item').classList.add('phone-texts__item--active');
+  });
+
+  swiperPhonesList.forEach((item) => {
+    item.on('slideChange', () => {
+      console.log('---   ', item.realIndex);
+      console.log('!!!  ', item.el.dataset.text)
+      const texts = document.querySelectorAll(`.${item.el.dataset.text} .phone-texts__item`);
+      if (document.querySelector(`.${item.el.dataset.text} .phone-texts__item--active`)) {
+        document.querySelector(`.${item.el.dataset.text} .phone-texts__item--active`).classList.remove('phone-texts__item--active');
+      }
+      Array.from(texts)[item.realIndex].classList.add('phone-texts__item--active')
+    });
+  })
+}
+
+
+
+
 if (document.querySelector('.hoist')) {
   const callback = (entry) => {
     entry.forEach(change => {
