@@ -8,7 +8,7 @@
   font-size: 16px;
   line-height: 21px;
   background-color: $background;
-  background-image: url('../img/background-414.svg');
+  background-image: url('../img/background-414.png') no-repeat 0 0;
   background-size: cover;
   color: $basic_dark;
   overflow-x: hidden;
@@ -19,12 +19,12 @@
   flex-direction: column;
 
   @media (min-width: $tablet) {
-    background: $background url('../img/background-768.svg') no-repeat;
+    background: $background url('../img/background-768.png') no-repeat 0 0;
     background-size: cover;
   }
 
   @media (min-width: $desktop) {
-    background: $background url('../img/background-1280.svg') no-repeat;
+    background: $background url('../img/background-1280.png') no-repeat 0 0;
     background-size: cover;
   }
 }
