@@ -68,10 +68,11 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
 
   const swiper = new Swiper('.simple-swiper', {
     slidesPerView: 1,
-    // pagination: {
-    //   el: '.swiper__pagination',
-    //   slidesPerView: 1
-    // },
+    observer: true,
+    observeParents: true,
+    pagination: {
+      el: '.swiper__pagination',
+    },
   });
 
 
@@ -79,7 +80,7 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     centeredSlides: true,
     loop: true,
     speed: 500,
-    slidesPerView: 1.5,
+    // slidesPerView: 2,
     spaceBetween: 20,
     // autoplay: {
     //     delay: 3000,
@@ -88,21 +89,24 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     //     nextEl: '.swiper-button-next',
     //     prevEl: '.swiper-button-prev',
     // },
+    pagination: {
+      el: '.swiper__pagination',
+    },
     observer: true,
     observeParents: true,
     breakpoints: {
 
       10: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
       768: {
         slidesPerView: 3,
       },
       1080: {
-        slidesPerView: 3.25,
+        slidesPerView: 3,
       },
       1280: {
-        slidesPerView: 3.75,
+        slidesPerView: 3,
       },
     },
     //   controller: {
@@ -113,8 +117,6 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
   phoneTextList.forEach((item) => {
     item.querySelector('.phone-texts__item').classList.add('phone-texts__item--active');
   });
-
-  // const texts = document.querySelectorAll('.phone-texts__item');
 
   swiperPhonesList.forEach((item) => {
     item.on('slideChange', () => {

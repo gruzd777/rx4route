@@ -9,6 +9,7 @@
   background: #b9f8ec;
   width: 100%;
   box-sizing: border-box;
+  min-height: 200px;
 
     position: absolute;
     top: 0;
@@ -44,5 +45,9 @@
 }
 
 .slider-item__title {
+  margin-bottom: 16px;
+}
+
+.phone-texts__title {
   margin-bottom: 16px;
 }

@@ -35,15 +35,14 @@
       <div class="phone-swiper__wrapper swiper-wrapper">
         {{#each screen}}
         <div class="swiper-slide phone-swiper__slide">
-          <picture>
-            <source type="image/webp" srcset="./img/{{img-mob}}.webp 1x, ./img/{{img-mob}}@2x.webp 2x">
-            <img class="phone-swiper__img" src="./img/{{img-mob}}.jpg" srcset="./img/{{img-mob}}@2x.jpg 2x"
+            <img class="phone-swiper__img" src="./img/{{img-mob}}.svg"
               alt="{{description-title}}">
-          </picture>
         </div>
         {{/each}}
       </div>
+      <div class="pagination phone-slider__pagination swiper__pagination"></div>
     </div>
+   
   </div>
   {{/ifequal}}
 </li>

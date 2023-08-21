@@ -1,10 +1,16 @@
 .phone-slider {
-  margin: 0 34px;
+  margin: 0 16px;
   overflow: hidden;
 }
 
 .phone-slider__text-block {
-  margin: 0 0 30px;
+  margin: 0 0 9px;
 }
 
 .phone-slider__swiper {}
+
+.phone-slider__pagination{
+  position: absolute;
+  bottom: -22px !important;
+  right: 0;
+}
