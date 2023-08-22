@@ -401,8 +401,8 @@
   .why__widget-driver-out {
     width: 325px;
     position: absolute;
-    right: -58px;
-    top: 20px;
+    right: -74px;
+    top: 12px;
   }
 }
 
@@ -493,7 +493,7 @@
   .why__map--timely {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 52px;
   }
 
   .why__pic-driver {
@@ -504,5 +504,9 @@
   .why__pic-time {
     bottom: -158px;
     left: -50px;
+  }
+
+  .why__communication {
+    border-radius: 40px;
   }
 }
