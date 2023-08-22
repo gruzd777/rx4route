@@ -4,7 +4,7 @@
 }
 
 .promo__title {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 42px;
   text-align: center;
   line-height: 110%;
@@ -47,7 +47,7 @@
 
   .promo__title {
     font-size: 50px;
-    line-height: 110%;
+    line-height: 118%;
     width: 565px;
     max-width: 565px;
   }
@@ -78,7 +78,7 @@
     font-size: 65px;
     width: 491px;
     text-align: left;
-    margin: 0 0 24px 0;
+    margin: 0 0 14px 0;
     padding-top: 72px;
   }
 
@@ -97,9 +97,9 @@
 
   .promo__img {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 693px;
-    height: 533px;
+    top: 5px;
+    right: 3px;
+    width: 736px;
+    height: 532px;
   }
 }
