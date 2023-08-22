@@ -8,7 +8,15 @@
     // padding: 189px 40px 155px;
   }
 
-  @media(min-width: $desktop-middle) {}
+  @media(min-width: $desktop-middle) {
+    background: url("../img/slide-features/bg/lights.png") no-repeat 0 0;
+    background-size: 100% 100%;
+    margin-top: -106px;
+    position: relative;
+    z-index: 1;
+    padding-top: 291px;
+    padding-bottom: 174px;
+  }
 }
 
 .service-features__wrapper {
@@ -23,6 +31,10 @@
   @media(min-width: $desktop-middle) {
     margin: 0 auto;
     max-width: 1200px;
+    padding: 41px 40px 63px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 41px;
+    box-sizing: border-box;
   }
 }
 
@@ -30,6 +42,10 @@
   position: relative;
   z-index: 5;
   margin-top: -13px;
+
+  @media(min-width: $desktop-middle) {
+    margin-top: 0;
+  }
 }
 
 .service-features__container {
@@ -47,6 +63,11 @@
   box-sizing: border-box;
 
   @media(min-width: $tablet) {}
+
+  @media(min-width: $desktop-middle) {
+    padding: 0;
+    margin: 0 0 32px;
+  }
 }
 
 .service-features__buttons-container {
@@ -63,6 +84,15 @@
     left: 0;
     position: absolute;
     z-index: 5;
+
+    @media(min-width: $desktop-middle) {
+      display: none;
+    }
+  }
+
+  @media(min-width: $desktop-middle) {
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -72,11 +102,11 @@
   box-sizing: border-box;
   position: relative;
   overflow: auto;
-  
+
   @media(min-width: $tablet) {}
 
   @media(min-width: $desktop-middle) {
-    width: 300px;
+    width: 240px;
     overflow: visible;
     z-index: 20;
   }
@@ -103,14 +133,17 @@
   padding: 18px 31px 16px;
   font-size: 16px;
   display: block;
+
+  @media(min-width: $desktop-middle) {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
-
-
 
 .service-features__slider {
   @media(min-width: $tablet) {}
 
   @media(min-width: $desktop-middle) {
-    width: 854px;
+    width: 879px;
   }
 }

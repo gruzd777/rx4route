@@ -46,6 +46,9 @@
 
 .push-right--animation {
     animation: push 0.8s ease-in;
+    @media(min-width: $desktop-middle) {
+        animation: none;
+      }
 }
 
 @keyframes push {

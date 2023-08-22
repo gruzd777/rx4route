@@ -2,6 +2,10 @@
   padding: 0 16px;
   box-sizing: border-box;
   position: relative;
+
+  @media(min-width: $desktop-middle) {
+    padding: 0;
+  }
 }
 
 .slider-item__description {
@@ -35,7 +39,12 @@
 
 .slider-item__text {}
 
-.slider-item__picture {}
+.slider-item__picture {
+  @media(min-width: $desktop-middle) {
+    border-radius: 30px;
+    overflow: hidden;
+  }
+}
 
 .slider-item__pic {
   width: 100%;
