@@ -2,4 +2,13 @@
   display: flex;
   gap: 7px;
   justify-content: center;
+
+  @media(min-width: $desktop-middle) {
+    justify-content: right;
+    position: absolute;
+    bottom: -32px!important;
+    left: unset!important;
+    padding-right: 0px;
+    box-sizing: border-box;
+  }
 }

@@ -203,7 +203,6 @@ if (document.querySelector('.push-right')) {
     entry.forEach(change => {
       if (change.isIntersecting) {
         change.target.classList.add('push-right--animation');
-
       }
     });
   }
