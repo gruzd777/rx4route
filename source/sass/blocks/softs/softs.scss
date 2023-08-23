@@ -215,7 +215,8 @@
   .softs__in,
   .softs__out {
     font-size: 16px;
-    padding: 6px 31px;
+    padding: 8px 27px;
+    line-height: 110%;
   }
 
   .softs__center {
@@ -314,6 +315,9 @@
     & .softs__out {
       right: calc(50% + 24px);
       animation: out 5s ease infinite;
+      padding: 8px 27px 8px 39px;
+      background: #31d8b1 url(../img/softs/check.svg)no-repeat 20px center;
+      background-size: 12px 12px;
 
       &::before {
         right: -21px;
@@ -338,8 +342,8 @@
       animation: in 8s ease infinite;
 
       &::before {
-        left: -25px;
-        top: 9px;
+        top: 14px;
+        left: -19px;
       }
     }
 
@@ -347,6 +351,9 @@
       transform: rotate(-61deg);
       right: calc(50% + 2px);
       animation: out 8s ease infinite;
+      padding: 8px 27px 8px 37px;
+      background: #31d8b1 url(../img/softs/check.svg)no-repeat 18px center;
+      background-size: 12px 12px;
 
       &::before {
         right: -24px;
@@ -379,8 +386,8 @@
 
       &::before {
         left: unset;
-        top: 12px;
-        right: -33px;
+        top: 26px;
+        right: -43px;
       }
     }
 
@@ -388,10 +395,13 @@
       transform: rotate(-118deg);
       right: calc(50% - 1px);
       animation: out 7s ease infinite;
+      padding: 8px 27px 8px 39px;
+      background: #31d8b1 url(../img/softs/check.svg)no-repeat 20px center;
+      background-size: 12px 12px;
 
       &::before {
         right: unset;
-        top: 40px;
+        top: 42px;
         left: -10px;
       }
     }
@@ -429,6 +439,9 @@
       transform: rotate(-180deg);
       right: calc(50% + 25px);
       animation: out 3s ease infinite;
+      padding: 8px 27px 8px 38px;
+      background: #31d8b1 url(../img/softs/check.svg)no-repeat 18px center;
+      background-size: 12px 12px;
 
       &::before {
         right: unset;
@@ -464,7 +477,7 @@
       &::before {
         left: unset;
         right: -27px;
-        top: 30px;
+        top: 36px;
       }
     }
 
@@ -472,6 +485,9 @@
       transform: rotate(118deg);
       right: calc(50% - 1px);
       animation: out 6s ease infinite;
+      padding: 8px 27px 8px 39px;
+      background: #31d8b1 url(../img/softs/check.svg)no-repeat 20px center;
+      background-size: 12px 12px;
 
       &::before {
         right: unset;
@@ -504,8 +520,8 @@
       animation: in 9s ease infinite;
 
       &::before {
-        top: 46px;
-        left: -27px;
+        top: 45px;
+        left: -35px;
       }
     }
 
@@ -513,6 +529,9 @@
       transform: rotate(61deg);
       right: calc(50% - 1px);
       animation: out 9s ease infinite;
+      padding: 8px 27px 8px 37px;
+      background: #31d8b1 url(../img/softs/check.svg)no-repeat 18px center;
+      background-size: 12px 12px;
 
       &::before {
         top: 4px;

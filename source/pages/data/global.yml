@@ -27,7 +27,7 @@ slider:
         img-mob: slide-features/pharmacies/driver-management-1
         background: pistachios
         position: left-bottom
-  - 
+  -
     texts: text-first
     screen:
       -
@@ -86,7 +86,7 @@ softs:
     class: your
     text: Your Software
     img: softrx
-    out: Photo
+    out: Signature
   -
     class: datascan
     text: DataScan
@@ -106,10 +106,9 @@ softs:
     class: pioneerrx
     text: PoneerPx
     img: pioneerrx
-    out: Tracking info            
+    out: Tracking info
   -
     class: suiterx
     text: SuiteRx
     img: suiterx
-    out: Photo         
-      
+    out: Photo

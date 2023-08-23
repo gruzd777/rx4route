@@ -1,16 +1,10 @@
 .subpromo-wrapper {
   border-radius: 40px;
   overflow: hidden;
-  background: #190c39 url('../img/background-spot-light-414.svg') no-repeat 0 0;
+  background: #190c39 url('../img/background-spot-light-414.png') no-repeat 0 0;
   background-size: cover;
 }
 
-// @media (min-width: $tablet) {
-//   .subpromo-wrapper {
-//     background: #190c39 url('../img/background-spot-light-414.svg') no-repeat 0 0;
-//     background-size: cover;
-//   }
-// }
 
 @media (min-width: $desktop) {
   .subpromo-wrapper {
