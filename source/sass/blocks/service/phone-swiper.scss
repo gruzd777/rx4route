@@ -6,19 +6,10 @@
 
   @media (min-width: $desktop) {
     overflow: hidden;
-    background: rgba(185, 248, 236, 0.3);
-
-    &--violet {
-      background-color: rgba(232, 213, 252, 0.3);
-    }
-
-    &--pistachios {
-      background-color: rgba(185, 248, 236, 0.3);
-    }
-
-    &--sky {
-      background-color: rgba(216, 235, 253, 0.3);
-    }
+    width: 740px;
+    margin: 0 auto;
+    background: none;
+    padding: 47px 0;
   }
 }
 
@@ -36,7 +27,7 @@
   opacity: 1;
   z-index: 1;
   transform: translateY(-4px) scale(1.1);
-  box-shadow: 5px 10px 13px rgba(0, 0, 0, 0.3);
+  // box-shadow: 5px 10px 13px rgba(0, 0, 0, 0.3);
   margin: 0 !important;
 }
 
@@ -52,7 +43,7 @@
 
 .phone-swiper__img {
   width: 100%;
-  opacity: 0.4;
+  // opacity: 0.4;
 }
 
 .phone-swiper__slide.swiper-slide-active .phone-swiper__img {
