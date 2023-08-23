@@ -2,7 +2,6 @@
   background: transparent;
   border: none;
   display: block;
-  font-family: Mulish;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -59,13 +58,18 @@
   color: rgba(23, 23, 23, 0.6);
   border-radius: 12px;
   background-color: rgba(136, 113, 246, 0);
-  transition: background-color 1s ;
+  transition: background-color 1s;
+  font-weight: 400;
+  cursor: pointer;
 
   &:hover {
     color: #171717;
+    border-color: transparent;
   }
   &.active {
     background-color: rgba(136, 113, 246, 1);
     color: #ffffff;
+    border-color: transparent;
+    font-weight: 700;
   }
 }

@@ -16,7 +16,7 @@ const serviceFeaturesTitle = document.querySelector('.service-features__title');
 const ServiceFeaturesTitles = {
   PHARMACIES: 'Service features',
   DRIVERS: 'Smart service features',
-  PATIENTS: 'Service features'
+  PATIENTS: 'Smart service features'
 }
 
 
