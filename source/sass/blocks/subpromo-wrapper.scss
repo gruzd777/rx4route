@@ -17,5 +17,7 @@
     background: #190c39 url("../img/subpromo-background-t.jpg") no-repeat 0 0;
     background-size: cover;
     border-radius: 95px;
+    position: relative;
+    z-index: 5;
   }
 }

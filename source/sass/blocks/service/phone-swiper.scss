@@ -6,19 +6,10 @@
 
   @media (min-width: $desktop) {
     overflow: hidden;
-    background: rgba(185, 248, 236, 0.3);
-
-    &--violet {
-      background-color: rgba(232, 213, 252, 0.3);
-    }
-
-    &--pistachios {
-      background-color: rgba(185, 248, 236, 0.3);
-    }
-
-    &--sky {
-      background-color: rgba(216, 235, 253, 0.3);
-    }
+    width: 740px;
+    margin: 0 auto;
+    background: none;
+    padding: 47px 0;
   }
 }
 

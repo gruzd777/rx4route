@@ -19,6 +19,12 @@
   }
 }
 
+.service-features--smart {
+  @media(min-width: $desktop-middle) {
+    background-image: url("../img/slide-features/bg/smart-light.png");
+  }
+}
+
 .service-features__wrapper {
   border-radius: 40px;
   overflow: hidden;
