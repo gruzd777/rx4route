@@ -409,6 +409,8 @@
 @media (min-width: $desktop) {
   .why {
     padding: 180px 0 70px 0;
+    background: url('../img/why-lights.png') no-repeat;
+    background-size: 100% auto;
   }
 
   .why__title {
