@@ -82,6 +82,11 @@
 .page-header__button {
   width: 223px;
   padding: 17px 32px;
+
+  // Удалить ниже при откате
+
+  position: absolute;
+  bottom: 24px;
 }
 
 .page-header__button--oppened {
