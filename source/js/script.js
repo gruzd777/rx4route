@@ -246,10 +246,19 @@ const menu = document.querySelector('.menu');
 const toggle = document.querySelector('.page-header__toggle');
 const mainButton = document.querySelector('.page-header__button')
 const pageHeaderElement = document.querySelector('.page-header');
+const pageBodyElement = document.querySelector('.page-body');
+const menuItem = document.querySelector('.menu__item')
 
 toggle.addEventListener('click', function () {
   toggle.classList.toggle('page-header__toggle--closed');
   menu.classList.toggle('menu--oppened');
   pageHeaderElement.classList.toggle('page-header--white');
   mainButton.classList.toggle('page-header__button--oppened');
+  pageBodyElement.classList.toggle('page-body--hidden');
+})
+
+menuItem.addEventListener('click', function() {
+  pageBodyElement.classList.remove('page-body--hidden');
+  menu.classList.remove('menu--oppened');
+  pageHeaderElement.classList.remove('page-header--white');
 })
