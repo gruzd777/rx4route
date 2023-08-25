@@ -11,7 +11,7 @@
 }
 
 .subpromo__title {
-  max-width: 385px;
+  width: 371px;
   text-align: left;
   margin-bottom: 24px;
 }
@@ -19,7 +19,7 @@
 .subpromo__text {
   line-height: 130%;
   margin-bottom: 16px;
-  max-width: 485px;
+  width: 369px;
 }
 
 .subpromo__text--second {
@@ -46,22 +46,23 @@
 }
 
 .subpromo__card--first {
-  top: 70px;
-  right: calc(50% + 30px);
-  width: 156px;
+  top: 81px;
+  right: calc(50% + 20px);
+  width: 171px;
   height: 194px;
-  background: #76E3D4;
+  background: #76e3d4;
   transform: rotate(-5deg);
   z-index: 100;
 }
 
 .subpromo__card--second {
-  top: 0;
-  left: calc(50% - 22px);
-  width: 227px;
+  top: 5px;
+  left: calc(50% - 14px);
+  width: 226px;
   min-height: 299px;
   transform: rotate(11deg);
-  background: #CBD2F9;
+  background: #cbd2f9;
+  padding-top: 15px;
 }
 
 .subpromo__icon {
@@ -73,6 +74,8 @@
 }
 
 .subpromo__icon--world {
+  margin-right: 17px;
+  transform: rotate(-12deg);
 }
 
 .subpromo__card-text {
@@ -96,7 +99,7 @@
 
 
   .subpromo__title {
-    max-width: 485px;
+    width: 481px;
     margin: 0 auto 24px;
     text-align: center;
   }
@@ -104,7 +107,7 @@
   .subpromo__text {
     margin: 0 auto 24px;
     text-align: center;
-    max-width: 482px;
+    width: 482px;
   }
 
   .subpromo__text--second {
@@ -119,7 +122,7 @@
   }
 
   .subpromo__title {
-    max-width: 763px;
+    width: 763px;
     text-align: left;
     margin: 0 0 32px 0;
   }
@@ -128,7 +131,7 @@
     font-family: Mulish;
     font-size: 18px;
     line-height: 130%;
-    max-width: 531px;
+    width: 531px;
     text-align: left;
     margin: 0 0 14px;
   }

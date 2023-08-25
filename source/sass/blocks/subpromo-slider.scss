@@ -4,7 +4,7 @@
 }
 
 .subpromo-slider__block {
-  height: 437px;
+  height: 335px;
   position: relative;
 
   &::before {
@@ -21,7 +21,7 @@
 }
 
 .subpromo-slider__title {
-  max-width: 382px;
+  width: 382px;
   margin: 0 auto 54px;
   text-align: center;
 }
@@ -51,7 +51,7 @@
   }
 
   .subpromo-slider__title {
-    max-width: 542px;
+    width: 542px;
     margin: 0 auto;
   }
 
@@ -81,7 +81,7 @@
   }
 
   .subpromo-slider__title {
-    max-width: 950px;
+    width: 950px;
   }
 
   .subpromo__logo-link {
