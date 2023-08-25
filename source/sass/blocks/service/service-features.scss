@@ -78,8 +78,8 @@
 
 .service-features__buttons-container {
   position: relative;
-  padding-right: 16px;
-  padding-left: 16px;
+  padding-right: 32px;
+  padding-left: 32px;
 
   &::before {
     content: "";
@@ -136,13 +136,14 @@
 }
 
 .service-features__button {
-  padding: 18px 31px 16px;
+  padding: 14px 22px 13px;
   font-size: 16px;
   display: block;
 
   @media(min-width: $desktop-middle) {
     font-size: 18px;
     line-height: 22px;
+    padding: 18px 31px 16px;
   }
 }
 
