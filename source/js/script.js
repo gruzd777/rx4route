@@ -166,7 +166,7 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
   });
 
   swiper.on('slideChange', () => {
-    
+
     console.log(swiper.realIndex, ' ', swiper.slides.length - 2)
 
 
@@ -247,7 +247,7 @@ const toggle = document.querySelector('.page-header__toggle');
 const mainButton = document.querySelector('.page-header__button')
 const pageHeaderElement = document.querySelector('.page-header');
 const pageBodyElement = document.querySelector('.page-body');
-const menuItem = document.querySelector('.menu__item')
+const menuList = document.querySelector('.menu__list');
 
 toggle.addEventListener('click', function () {
   toggle.classList.toggle('page-header__toggle--closed');
@@ -257,8 +257,11 @@ toggle.addEventListener('click', function () {
   pageBodyElement.classList.toggle('page-body--hidden');
 })
 
-menuItem.addEventListener('click', function() {
-  pageBodyElement.classList.remove('page-body--hidden');
-  menu.classList.remove('menu--oppened');
-  pageHeaderElement.classList.remove('page-header--white');
+menuList.addEventListener('click', function(evt) {
+  if(evt.target.classList.contains('menu__link')) {
+    pageBodyElement.classList.remove('page-body--hidden');
+    menu.classList.remove('menu--oppened');
+    pageHeaderElement.classList.remove('page-header--white');
+    toggle.classList.add('page-header__toggle--closed');
+  }
 })
