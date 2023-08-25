@@ -145,6 +145,10 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
 
   swiperPhonesList.forEach((item) => {
     item.on('slideChange', () => {
+
+      console.log(item.realIndex, ' ', item.slides.length - 2)
+
+
       const texts = document.querySelectorAll(`.${item.el.dataset.text} .phone-texts__item`);
       if (document.querySelector(`.${item.el.dataset.text} .phone-texts__item--active`)) {
         document.querySelector(`.${item.el.dataset.text} .phone-texts__item--active`).classList.remove('phone-texts__item--active');
@@ -162,6 +166,10 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
   });
 
   swiper.on('slideChange', () => {
+    
+    console.log(swiper.realIndex, ' ', swiper.slides.length - 2)
+
+
     const texts = document.querySelectorAll(`.${swiper.el.dataset.text} .simple-texts__description`);
     if (document.querySelector(`.${swiper.el.dataset.text} .simple-texts__description--active`)) {
       document.querySelector(`.${swiper.el.dataset.text} .simple-texts__description--active`).classList.remove('simple-texts__description--active');
