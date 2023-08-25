@@ -122,7 +122,7 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     breakpoints: {
 
       10: {
-        slidesPerView: 3.1,
+        slidesPerView: 2.4,
       },
       768: {
         slidesPerView: 3,
@@ -146,7 +146,7 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
   swiperPhonesList.forEach((item) => {
     item.on('slideChange', () => {
 
-      console.log(item.realIndex, ' ', item.slides.length - 2)
+      // console.log(item.realIndex, ' ', item.slides.length - 2)
 
 
       const texts = document.querySelectorAll(`.${item.el.dataset.text} .phone-texts__item`);
@@ -167,7 +167,8 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
 
   swiper.on('slideChange', () => {
 
-    console.log(swiper.realIndex, ' ', swiper.slides.length - 2)
+
+    // console.log(swiper.realIndex, ' ', swiper.slides.length - 2)
 
 
     const texts = document.querySelectorAll(`.${swiper.el.dataset.text} .simple-texts__description`);
