@@ -36,7 +36,6 @@ if (serviceFeaturesScreen) {
   serviceFeaturesScreen.classList.add('service-slider__item--active');
 }
 
-
 const setActive = (element, classNameActive, classNameBase) => {
   document.querySelector(`.${classNameBase}.${classNameActive}`).classList.remove(classNameActive);
   element.classList.add(classNameActive)
@@ -58,25 +57,29 @@ const moveMenu = () => {
   });
 };
 
-if (serviceFeaturesButtonContainer) {
-  serviceFeaturesButtonContainer.addEventListener('click', (e) => {
-    if (e.target.classList.contains('service-features__button')) {
-      setActive(e.target, 'active', 'service-features__button');
+const serviceFeatureButtonClickHandler = (element) => {
+  setActive(element, 'active', 'service-features__button');
       setActive(
-        Array.from(serviceFeaturesScreens)[Array.from(serviceFeaturesButtons).indexOf(e.target)],
+        Array.from(serviceFeaturesScreens)[Array.from(serviceFeaturesButtons).indexOf(element)],
         'service-slider__item--active',
         'service-slider__item'
       );
 
-      const typeBackground = e.target.dataset.type;
+      const typeBackground = element.dataset.type;
       if (typeBackground === 'smart') {
         serviceFeaturesSection.classList.add('service-features--smart');
       } else {
         serviceFeaturesSection.classList.remove('service-features--smart')
       }
 
-      const titleTextType = e.target.dataset.title;
+      const titleTextType = element.dataset.title;
       serviceFeaturesTitle.textContent = ServiceFeaturesTitles[titleTextType.toUpperCase()];
+}
+
+if (serviceFeaturesButtonContainer) {
+  serviceFeaturesButtonContainer.addEventListener('click', (e) => {
+    if (e.target.classList.contains('service-features__button')) {
+      serviceFeatureButtonClickHandler(e.target);
     }
   });
 }
@@ -85,9 +88,10 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
 
   const swiper = new Swiper('.simple-swiper', {
     slidesPerView: 1,
-    loop: true,
+    // loop: true,
     observer: true,
     observeParents: true,
+    observeSlideChildren: true,
     pagination: {
       el: '.swiper__pagination',
       clickable: true
@@ -103,7 +107,7 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
 
   const swiperPhonesList = new Swiper('.phone-swiper', {
     centeredSlides: true,
-    loop: true,
+    // loop: true,
     speed: 500,
     spaceBetween: 20,
     pagination: {
@@ -112,13 +116,15 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     },
     observer: true,
     observeParents: true,
+    observeSlideChildren: true,
     keyboard: {
       enabled: true,
-      onlyInViewport: false
+      onlyInViewport: true
     },
     mousewheel: {
       releaseOnEdges: true,
     },
+    slideToClickedSlide: true,
     breakpoints: {
 
       10: {
@@ -146,8 +152,6 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
   swiperPhonesList.forEach((item) => {
     item.on('slideChange', () => {
 
-      // console.log(item.realIndex, ' ', item.slides.length - 2)
-
 
       const texts = document.querySelectorAll(`.${item.el.dataset.text} .phone-texts__item`);
       if (document.querySelector(`.${item.el.dataset.text} .phone-texts__item--active`)) {
@@ -158,6 +162,12 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
       item.el.closest('.phone-slider').classList.remove('phone-slider--violet', 'phone-slider--pistachios', 'phone-slider--sky');
       item.el.closest('.phone-slider').classList.add(`phone-slider--${color}`);
     });
+
+    item.on('reachEnd', (sw) => {
+      console.log(sw)
+      //serviceFeatureButtonClickHandler
+      
+    });
   });
 
   const simpleTextList = document.querySelectorAll('.simple-texts');
@@ -167,16 +177,29 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
 
   swiper.on('slideChange', () => {
 
-
-    // console.log(swiper.realIndex, ' ', swiper.slides.length - 2)
-
-
     const texts = document.querySelectorAll(`.${swiper.el.dataset.text} .simple-texts__description`);
     if (document.querySelector(`.${swiper.el.dataset.text} .simple-texts__description--active`)) {
       document.querySelector(`.${swiper.el.dataset.text} .simple-texts__description--active`).classList.remove('simple-texts__description--active');
     }
     Array.from(texts)[swiper.realIndex].classList.add('simple-texts__description--active');
   });
+
+  const swiperSection = document.querySelector('.service-features');
+
+  const callback = (entry) => {
+    if (entry[0].isIntersecting) {
+      swiper.params.autoplay.delay = 1000;
+      swiper.params.autoplay.stopOnLastSlide = true;
+      swiper.params.autoplay.disableOnInteraction = true;
+      swiper.autoplay.start()
+    }
+
+  }
+  const options = {
+    threshold: 0.7
+  }
+  const observer = new IntersectionObserver(callback, options);
+  observer.observe(swiperSection);
 
 }
 
@@ -258,8 +281,8 @@ toggle.addEventListener('click', function () {
   pageBodyElement.classList.toggle('page-body--hidden');
 })
 
-menuList.addEventListener('click', function(evt) {
-  if(evt.target.classList.contains('menu__link')) {
+menuList.addEventListener('click', function (evt) {
+  if (evt.target.classList.contains('menu__link')) {
     pageBodyElement.classList.remove('page-body--hidden');
     menu.classList.remove('menu--oppened');
     pageHeaderElement.classList.remove('page-header--white');
