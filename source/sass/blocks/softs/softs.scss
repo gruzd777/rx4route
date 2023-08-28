@@ -338,13 +338,13 @@
 
     & .softs__in {
       transform: rotate(-61deg);
-      left: calc(50% + 0px);
+      left: calc(50% + 17px);
       margin-top: -118px;
       animation: in 8s ease infinite;
 
       &::before {
-        top: 14px;
-        left: -19px;
+        top: 2px;
+        left: -29px;
       }
     }
 
@@ -381,14 +381,14 @@
 
     & .softs__in {
       transform: rotate(-118deg);
-      left: calc(50% + 0px);
+      left: calc(50% + 13px);
       margin-top: 116px;
       animation: in 7s ease infinite;
 
       &::before {
         left: unset;
-        top: 26px;
-        right: -43px;
+        top: 16px;
+        right: -51px;
       }
     }
 
@@ -471,14 +471,14 @@
 
     & .softs__in {
       transform: rotate(118deg);
-      left: calc(50% + 2px);
+      left: calc(50% + 12px);
       margin-top: -126px;
       animation: in 6s ease infinite;
 
       &::before {
         left: unset;
         right: -27px;
-        top: 36px;
+        top: 46px;
       }
     }
 
