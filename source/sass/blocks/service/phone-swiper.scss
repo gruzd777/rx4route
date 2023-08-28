@@ -4,6 +4,7 @@
   // background: #b9f8ec;
   background-color: rgba(232, 213, 252, 0.3);
   border-radius: 30px;
+  margin-bottom: 25px;
 
   @media (min-width: $desktop) {
     overflow: hidden;
@@ -36,7 +37,8 @@
 
 .phone-swiper__slide {
   overflow: hidden;
-  transition: all .7s;
+  // transition: all .7s;
+  transition:none;
   // background-color: #ffffff;
   border-radius: 20px;
   // box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1);

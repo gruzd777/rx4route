@@ -12,6 +12,9 @@
   @media (min-width: $tablet) {
     display: inline-block;
   }
+  @media (min-width: $desktop) {
+    display: none;
+  }
 }
 
 .only--desktop {

@@ -72,8 +72,8 @@ const serviceFeatureButtonClickHandler = (element) => {
         serviceFeaturesSection.classList.remove('service-features--smart')
       }
 
-      const titleTextType = element.dataset.title;
-      serviceFeaturesTitle.textContent = ServiceFeaturesTitles[titleTextType.toUpperCase()];
+      // const titleTextType = element.dataset.title;
+      // serviceFeaturesTitle.textContent = ServiceFeaturesTitles[titleTextType.toUpperCase()];
 }
 
 if (serviceFeaturesButtonContainer) {
