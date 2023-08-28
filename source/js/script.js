@@ -107,7 +107,7 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
 
   const swiperPhonesList = new Swiper('.phone-swiper', {
     centeredSlides: true,
-    // loop: true,
+    loop: true,
     speed: 500,
     spaceBetween: 20,
     pagination: {
