@@ -17,7 +17,7 @@
   background: #b9f8ec;
   width: 100%;
   box-sizing: border-box;
-  min-height: 200px;
+  min-height: 220px;
 
   position: absolute;
   top: 0;
@@ -25,8 +25,11 @@
   opacity: 0;
   z-index: 0;
   transition: opacity 1s;
+  @media (min-width: $tablet) {
+    min-height: 162px;
+  }
 
-  @media(min-width: $desktop) {
+  @media (min-width: $desktop) {
     position: absolute;
     width: 336px;
     transition: opacity 0.3s;
