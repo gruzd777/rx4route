@@ -4,10 +4,12 @@
   padding-right: 16px;
   padding-bottom: 24px;
   overflow: hidden;
+  position: relative;
 }
 
 .page-header--white {
   background-color: $basic_white;
+  overflow: visible;
 }
 
 .page-header--menu-oppened {
