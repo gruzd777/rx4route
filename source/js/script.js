@@ -122,7 +122,7 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
       onlyInViewport: true
     },
     mousewheel: {
-      releaseOnEdges: true,
+      releaseOnEdges: false,
     },
     slideToClickedSlide: true,
     breakpoints: {
@@ -163,10 +163,17 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
       item.el.closest('.phone-slider').classList.add(`phone-slider--${color}`);
     });
 
-    item.on('reachEnd', (sw) => {
-      console.log(sw)
-      //serviceFeatureButtonClickHandler
-      
+    item.on('scroll', (sw) => {
+      console.log('mousewheel ', item.realIndex, ' --- ', item.slides.length - 6, '   --- -   ', item.isEnd);
+      const btns = document.querySelectorAll('.service-features__button');
+      const activeBtn = document.querySelector('.service-features__button.active');
+      const currentIndexBtn = Array.from(btns).indexOf(activeBtn);
+      console.log('here ', activeBtn);
+      if (item.realIndex*1 === 0) {
+        console.log('here!!!');
+        const nextIndexButton = (currentIndexBtn + 1) < btns.length ? currentIndexBtn + 1 : 0;
+        serviceFeatureButtonClickHandler(btns[nextIndexButton]);
+      }
     });
   });
 
