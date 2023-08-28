@@ -196,7 +196,7 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
 
   }
   const options = {
-    threshold: 0.7
+    threshold: 0.6
   }
   const observer = new IntersectionObserver(callback, options);
   observer.observe(swiperSection);
