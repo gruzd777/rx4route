@@ -166,7 +166,7 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     item.on('reachEnd', (sw) => {
       console.log(sw)
       //serviceFeatureButtonClickHandler
-      
+
     });
   });
 
@@ -209,6 +209,7 @@ if (document.querySelector('.hoist')) {
       if (change.isIntersecting) {
         change.target.querySelectorAll('.hoisting__element').forEach((item) => {
           item.classList.remove('hoisting__element--not-visible');
+          item.classList.remove('hoisting__element--not-visible-widgets');
         });
       }
     });

@@ -125,13 +125,19 @@
 
 .service-features__buttons {
   display: inline-flex;
-  width: auto;
   white-space: nowrap;
+  justify-content: space-between;
+  width: 100%;
 
-  @media(min-width: $tablet) {}
+  @media(min-width: $tablet) {
+    justify-content: flex-start;
+    width: auto;
+  }
 
   @media(min-width: $desktop-middle) {
     display: block;
+    justify-content: flex-start;
+    width: auto;
   }
 }
 
@@ -144,6 +150,8 @@
     font-size: 18px;
     line-height: 22px;
     padding: 18px 31px 16px;
+    width: 195px;
+    text-align: left;
   }
 }
 

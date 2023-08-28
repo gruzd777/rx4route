@@ -29,8 +29,13 @@
   transition: all 4.5s ease-out;
 }
 
+.hoisting__element--not-visible-widgets {
+  translate: 0 800px;
+  opacity: 0;
+}
+
 .hoisting__element--not-visible {
-    translate: 0 1000px;
+    translate: 0 200px;
     opacity: 0;
 }
 
