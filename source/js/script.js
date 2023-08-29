@@ -177,6 +177,14 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     // });
   });
 
+  document.querySelectorAll('.booking-button').forEach((bookingButton) => {
+    bookingButton.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      document.querySelector('.calendly-badge-content').click();
+      console.log('click');
+    })
+  })
+
   const simpleTextList = document.querySelectorAll('.simple-texts');
   simpleTextList.forEach((item) => {
     item.querySelector('.simple-texts__description').classList.add('simple-texts__description--active');
