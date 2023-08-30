@@ -108,7 +108,7 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
   const swiperPhonesList = new Swiper('.phone-swiper', {
     centeredSlides: true,
     loop: true,
-    speed: 500,
+    speed: 1000,
     spaceBetween: 20,
     pagination: {
       el: '.swiper__pagination',
@@ -212,7 +212,7 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
 
   }
   const options = {
-    threshold: 0.5
+    threshold: 0.3
   }
   const observer = new IntersectionObserver(callback, options);
   observer.observe(swiperSection);
@@ -267,16 +267,19 @@ if (document.querySelector('.push-right')) {
   const callback = (entry) => {
     entry.forEach(change => {
       if (change.isIntersecting) {
-        change.target.classList.add('push-right--animation');
+        document.querySelectorAll('.push-right').classList.add('push-right--animation');
       }
     });
   }
   const options = {
-    threshold: 0.5
+    threshold: 0.3
   }
+
   const observer = new IntersectionObserver(callback, options);
 
-  const targets = document.querySelectorAll('.push-right');
+  // const targets = document.querySelectorAll('.push-right');
+
+  const targets = document.querySelectorAll('.service-features__container');
 
   targets.forEach((target) => {
     observer.observe(target);

@@ -3,7 +3,7 @@
 }
 
 .hoisting__element {
-    transition: all 2.5s ease-out;
+    transition: all 1.5s ease-out;
     z-index: 10;
     opacity: 1;
     translate: 0 0;
@@ -14,23 +14,23 @@
 }
 
 .hoisting__element--pionerrx {
-  transition: all 3.0s ease-out;
+  transition: all 2.0s ease-out;
 }
 
 .hoisting__element--datascan {
-  transition: all 3.5s ease-out;
+  transition: all 2.5s ease-out;
 }
 
 .hoisting__element--suitrx {
-  transition: all 4.0s ease-out;
+  transition: all 3.0s ease-out;
 }
 
 .hoisting__element--pksoftware {
-  transition: all 4.5s ease-out;
+  transition: all 3.5s ease-out;
 }
 
 .hoisting__element--not-visible-widgets {
-  translate: 0 800px;
+  translate: 0 400px;
   opacity: 0;
 }
 
