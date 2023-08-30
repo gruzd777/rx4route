@@ -59,21 +59,21 @@ const moveMenu = () => {
 
 const serviceFeatureButtonClickHandler = (element) => {
   setActive(element, 'active', 'service-features__button');
-      setActive(
-        Array.from(serviceFeaturesScreens)[Array.from(serviceFeaturesButtons).indexOf(element)],
-        'service-slider__item--active',
-        'service-slider__item'
-      );
+  setActive(
+    Array.from(serviceFeaturesScreens)[Array.from(serviceFeaturesButtons).indexOf(element)],
+    'service-slider__item--active',
+    'service-slider__item'
+  );
 
-      const typeBackground = element.dataset.type;
-      if (typeBackground === 'smart') {
-        serviceFeaturesSection.classList.add('service-features--smart');
-      } else {
-        serviceFeaturesSection.classList.remove('service-features--smart')
-      }
+  const typeBackground = element.dataset.type;
+  if (typeBackground === 'smart') {
+    serviceFeaturesSection.classList.add('service-features--smart');
+  } else {
+    serviceFeaturesSection.classList.remove('service-features--smart')
+  }
 
-      // const titleTextType = element.dataset.title;
-      // serviceFeaturesTitle.textContent = ServiceFeaturesTitles[titleTextType.toUpperCase()];
+  // const titleTextType = element.dataset.title;
+  // serviceFeaturesTitle.textContent = ServiceFeaturesTitles[titleTextType.toUpperCase()];
 }
 
 if (serviceFeaturesButtonContainer) {
@@ -265,25 +265,16 @@ if (document.querySelector('.hoisting-text')) {
 
 if (document.querySelector('.push-right')) {
   const callback = (entry) => {
-    entry.forEach(change => {
-      if (change.isIntersecting) {
-        document.querySelectorAll('.push-right').classList.add('push-right--animation');
-      }
-    });
+    if (entry[0].isIntersecting) {
+      document.querySelector('.push-right').classList.add('push-right--animation');
+    }
   }
   const options = {
-    threshold: 0.3
+    threshold: 0.7
   }
-
   const observer = new IntersectionObserver(callback, options);
-
-  // const targets = document.querySelectorAll('.push-right');
-
-  const targets = document.querySelectorAll('.service-features__container');
-
-  targets.forEach((target) => {
-    observer.observe(target);
-  });
+  const target = document.querySelector('.service-features');
+  observer.observe(target);
 }
 
 const menu = document.querySelector('.menu');
