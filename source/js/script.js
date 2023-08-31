@@ -13,12 +13,6 @@ const softs = document.querySelectorAll('.softs__item');
 
 const serviceFeaturesSection = document.querySelector('.service-features');
 const serviceFeaturesTitle = document.querySelector('.service-features__title');
-const ServiceFeaturesTitles = {
-  PHARMACIES: 'Smart service features',
-  DRIVERS: 'Smart service features',
-  PATIENTS: 'Smart service features'
-}
-
 
 if (firstSoft) {
   firstSoft.classList.add('softs__item--active');
@@ -41,22 +35,6 @@ const setActive = (element, classNameActive, classNameBase) => {
   element.classList.add(classNameActive)
 };
 
-const moveMenu = () => {
-  const activeElement = document.querySelector('.service-features__button.active');
-  const buttonElements = Array.from(serviceFeaturesButtons)
-  const activeElementIndex = buttonElements.indexOf(activeElement);
-
-  serviceFeaturesButtonContainer.innerHTML = '';
-
-  buttonElements.slice(activeElementIndex, buttonElements.length).forEach((item) => {
-    serviceFeaturesButtonContainer.append(item)
-  });
-
-  buttonElements.slice(0, activeElementIndex).forEach((item) => {
-    serviceFeaturesButtonContainer.append(item)
-  });
-};
-
 const serviceFeatureButtonClickHandler = (element) => {
   setActive(element, 'active', 'service-features__button');
   setActive(
@@ -71,9 +49,6 @@ const serviceFeatureButtonClickHandler = (element) => {
   } else {
     serviceFeaturesSection.classList.remove('service-features--smart')
   }
-
-  // const titleTextType = element.dataset.title;
-  // serviceFeaturesTitle.textContent = ServiceFeaturesTitles[titleTextType.toUpperCase()];
 }
 
 if (serviceFeaturesButtonContainer) {
@@ -90,8 +65,6 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     slidesPerView: 1,
     // loop: true,
     observer: true,
-    observeParents: true,
-    observeSlideChildren: true,
     pagination: {
       el: '.swiper__pagination',
       clickable: true
@@ -115,8 +88,6 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
       clickable: true
     },
     observer: true,
-    observeParents: true,
-    observeSlideChildren: true,
     keyboard: {
       enabled: true,
       onlyInViewport: true
@@ -161,29 +132,25 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
       const color = Array.from(texts)[item.realIndex].dataset.color;
       item.el.closest('.phone-slider').classList.remove('phone-slider--violet', 'phone-slider--pistachios', 'phone-slider--sky');
       item.el.closest('.phone-slider').classList.add(`phone-slider--${color}`);
+
+
+      // console.log('mousewheel ', item.realIndex, ' --- ', item.slides.length - 6, '   --- -   ', item.isEnd);
+      // const btns = document.querySelectorAll('.service-features__button');
+      // const activeBtn = document.querySelector('.service-features__button.active');
+      // const currentIndexBtn = Array.from(btns).indexOf(activeBtn);
+      // console.log('here ', activeBtn);
+      // if (item.realIndex*1 === 0) {
+      //   console.log('here!!!');
+      //   const nextIndexButton = (currentIndexBtn + 1) < btns.length ? currentIndexBtn + 1 : 0;
+      //   serviceFeatureButtonClickHandler(btns[nextIndexButton]);
+      // }
+
     });
 
-    // item.on('scroll', (sw) => {
-    //   console.log('mousewheel ', item.realIndex, ' --- ', item.slides.length - 6, '   --- -   ', item.isEnd);
-    //   const btns = document.querySelectorAll('.service-features__button');
-    //   const activeBtn = document.querySelector('.service-features__button.active');
-    //   const currentIndexBtn = Array.from(btns).indexOf(activeBtn);
-    //   console.log('here ', activeBtn);
-    //   if (item.realIndex*1 === 0) {
-    //     console.log('here!!!');
-    //     const nextIndexButton = (currentIndexBtn + 1) < btns.length ? currentIndexBtn + 1 : 0;
-    //     serviceFeatureButtonClickHandler(btns[nextIndexButton]);
-    //   }
+    // item.on('reachEnd', () => {
+    //   console.log('fire');
     // });
   });
-
-  document.querySelectorAll('.booking-button').forEach((bookingButton) => {
-    bookingButton.addEventListener('click', (evt) => {
-      evt.preventDefault();
-      document.querySelector('.calendly-badge-content').click();
-      console.log('click');
-    })
-  })
 
   const simpleTextList = document.querySelectorAll('.simple-texts');
   simpleTextList.forEach((item) => {
@@ -197,9 +164,18 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
       document.querySelector(`.${swiper.el.dataset.text} .simple-texts__description--active`).classList.remove('simple-texts__description--active');
     }
     Array.from(texts)[swiper.realIndex].classList.add('simple-texts__description--active');
-  });
 
-  const swiperSection = document.querySelector('.service-features');
+    // console.log('mousewheel ', swiper.realIndex, ' --- ', swiper.slides.length - 6, '   --- -   ', swiper.isEnd);
+    //   const btns = document.querySelectorAll('.service-features__button');
+    //   const activeBtn = document.querySelector('.service-features__button.active');
+    //   const currentIndexBtn = Array.from(btns).indexOf(activeBtn);
+    //   console.log('here ', activeBtn);
+    //   if (swiper.realIndex*1 === 0) {
+    //     console.log('here!!!');
+    //     const nextIndexButton = (currentIndexBtn + 1) < btns.length ? currentIndexBtn + 1 : 0;
+    //     serviceFeatureButtonClickHandler(btns[nextIndexButton]);
+    //   }
+  });
 
   const callback = (entry) => {
     if (entry[0].isIntersecting) {
@@ -215,8 +191,23 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     threshold: 0.3
   }
   const observer = new IntersectionObserver(callback, options);
-  observer.observe(swiperSection);
+  observer.observe(serviceFeaturesSection);
 
+  document.querySelector('.simple-swiper').addEventListener('wheel', () => {
+    console.log('fire');
+  })
+
+}
+
+
+if (document.querySelector('.booking-button')) {
+  document.querySelectorAll('.booking-button').forEach((bookingButton) => {
+    bookingButton.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      document.querySelector('.calendly-badge-content').click();
+      console.log('click');
+    })
+  });
 }
 
 if (document.querySelector('.hoist')) {
