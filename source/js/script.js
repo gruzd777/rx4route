@@ -65,6 +65,8 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     slidesPerView: 1,
     // loop: true,
     observer: true,
+    observeParents: true,
+    resizeObserver: true,
     pagination: {
       el: '.swiper__pagination',
       clickable: true
@@ -88,6 +90,8 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
       clickable: true
     },
     observer: true,
+    observeParents: true,
+    resizeObserver: true,
     keyboard: {
       enabled: true,
       onlyInViewport: true
@@ -119,7 +123,6 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
   phoneTextList.forEach((item) => {
     item.querySelector('.phone-texts__item').classList.add('phone-texts__item--active');
   });
-
   swiperPhonesList.forEach((item) => {
     item.on('slideChange', () => {
 
@@ -146,10 +149,11 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
       // }
 
     });
-
-    // item.on('reachEnd', () => {
-    //   console.log('fire');
+    // item.on('beforeSlideChangeStart', () => {
+    //   console.log('beforeSlideChangeStart')
     // });
+
+
   });
 
   const simpleTextList = document.querySelectorAll('.simple-texts');
@@ -192,13 +196,7 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
   }
   const observer = new IntersectionObserver(callback, options);
   observer.observe(serviceFeaturesSection);
-
-  document.querySelector('.simple-swiper').addEventListener('wheel', () => {
-    console.log('fire');
-  })
-
 }
-
 
 if (document.querySelector('.booking-button')) {
   document.querySelectorAll('.booking-button').forEach((bookingButton) => {
