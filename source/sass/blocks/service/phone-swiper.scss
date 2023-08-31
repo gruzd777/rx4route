@@ -1,10 +1,10 @@
 .phone-swiper {
   width: 100%;
   padding: 50px 0;
-  // background: #b9f8ec;
   background-color: rgba(232, 213, 252, 0.3);
   border-radius: 30px;
   margin-bottom: 25px;
+  display: none;
 
   @media (min-width: $desktop) {
     overflow: hidden;
@@ -13,6 +13,10 @@
     background: none;
     padding: 47px 0;
   }
+}
+
+.service-slider__item--active .phone-swiper {
+  display: block;
 }
 
 .phone-slider--violet .phone-swiper {
