@@ -129,7 +129,13 @@
 .service-features__button {
   padding: 14px 22px 13px;
   font-size: 16px;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet) {
+    justify-content: flex-start;
+  }
 
   @media(min-width: $desktop-middle) {
     font-size: 18px;
@@ -137,6 +143,7 @@
     padding: 18px 31px 16px;
     width: 195px;
     text-align: left;
+    justify-content: flex-start;
   }
 }
 
