@@ -34,8 +34,9 @@ const setActive = (element, classNameActive, classNameBase) => {
   document.querySelector(`.${classNameBase}.${classNameActive}`).classList.remove(classNameActive);
   element.classList.add(classNameActive)
 };
-
+let prev = 0;
 const serviceFeatureButtonClickHandler = (element) => {
+  prev = 0;
   setActive(element, 'active', 'service-features__button');
   setActive(
     Array.from(serviceFeaturesScreens)[Array.from(serviceFeaturesButtons).indexOf(element)],
@@ -43,7 +44,11 @@ const serviceFeatureButtonClickHandler = (element) => {
     'service-slider__item'
   );
 
+  swiper.slideToLoop(0);
+  swiperPhonesList[0].slideToLoop(0);
+  swiperPhonesList[1].slideToLoop(0);
   const typeBackground = element.dataset.type;
+  
   if (typeBackground === 'smart') {
     serviceFeaturesSection.classList.add('service-features--smart');
   } else {
@@ -61,12 +66,14 @@ if (serviceFeaturesButtonContainer) {
 
 if (document.querySelector('.phone-swiper') || document.querySelector('.simple-swiper')) {
 
-  const swiper = new Swiper('.simple-swiper', {
+  var swiper = new Swiper('.simple-swiper', {
     slidesPerView: 1,
-    // loop: true,
+    loop: true,
+    initialSlide: 0,
     observer: true,
     observeParents: true,
     resizeObserver: true,
+    watchActiveIndex: true,
     pagination: {
       el: '.swiper__pagination',
       clickable: true
@@ -80,8 +87,9 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     },
   });
 
-  const swiperPhonesList = new Swiper('.phone-swiper', {
+  var swiperPhonesList = new Swiper('.phone-swiper', {
     centeredSlides: true,
+    initialSlide: 0,
     loop: true,
     speed: 1000,
     spaceBetween: 20,
@@ -94,10 +102,10 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     resizeObserver: true,
     keyboard: {
       enabled: true,
-      onlyInViewport: true
+      // onlyInViewport: true
     },
     mousewheel: {
-      releaseOnEdges: false,
+      releaseOnEdges: true,
     },
     slideToClickedSlide: true,
     breakpoints: {
@@ -117,6 +125,7 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     },
   });
 
+
   const phoneTextList = document.querySelectorAll('.phone-texts');
   const phoneSlider = document.querySelector('.phone-slider');
 
@@ -124,6 +133,7 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     item.querySelector('.phone-texts__item').classList.add('phone-texts__item--active');
   });
   swiperPhonesList.forEach((item) => {
+
     item.on('slideChange', () => {
 
 
@@ -136,24 +146,16 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
       item.el.closest('.phone-slider').classList.remove('phone-slider--violet', 'phone-slider--pistachios', 'phone-slider--sky');
       item.el.closest('.phone-slider').classList.add(`phone-slider--${color}`);
 
-
-      // console.log('mousewheel ', item.realIndex, ' --- ', item.slides.length - 6, '   --- -   ', item.isEnd);
-      // const btns = document.querySelectorAll('.service-features__button');
-      // const activeBtn = document.querySelector('.service-features__button.active');
-      // const currentIndexBtn = Array.from(btns).indexOf(activeBtn);
-      // console.log('here ', activeBtn);
-      // if (item.realIndex*1 === 0) {
-      //   console.log('here!!!');
-      //   const nextIndexButton = (currentIndexBtn + 1) < btns.length ? currentIndexBtn + 1 : 0;
-      //   serviceFeatureButtonClickHandler(btns[nextIndexButton]);
-      // }
-
+      // const serviceFeaturesButtons = document.querySelectorAll('.service-features__button');
+      const activeBtn = document.querySelector('.service-features__button.active');
+      const currentIndexBtn = Array.from(serviceFeaturesButtons).indexOf(activeBtn);
+      if (item.realIndex * 1 === 0 && prev === item.slides.length - 6 - 1) {
+        const nextIndexButton = (currentIndexBtn + 1) < serviceFeaturesButtons.length ? currentIndexBtn + 1 : 0;
+        serviceFeatureButtonClickHandler(serviceFeaturesButtons[nextIndexButton], item);
+      } else {
+        prev = item.realIndex * 1;
+      }
     });
-    // item.on('beforeSlideChangeStart', () => {
-    //   console.log('beforeSlideChangeStart')
-    // });
-
-
   });
 
   const simpleTextList = document.querySelectorAll('.simple-texts');
@@ -169,16 +171,14 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     }
     Array.from(texts)[swiper.realIndex].classList.add('simple-texts__description--active');
 
-    // console.log('mousewheel ', swiper.realIndex, ' --- ', swiper.slides.length - 6, '   --- -   ', swiper.isEnd);
-    //   const btns = document.querySelectorAll('.service-features__button');
-    //   const activeBtn = document.querySelector('.service-features__button.active');
-    //   const currentIndexBtn = Array.from(btns).indexOf(activeBtn);
-    //   console.log('here ', activeBtn);
-    //   if (swiper.realIndex*1 === 0) {
-    //     console.log('here!!!');
-    //     const nextIndexButton = (currentIndexBtn + 1) < btns.length ? currentIndexBtn + 1 : 0;
-    //     serviceFeatureButtonClickHandler(btns[nextIndexButton]);
-    //   }
+    const activeBtn = document.querySelector('.service-features__button.active');
+    const currentIndexBtn = Array.from(serviceFeaturesButtons).indexOf(activeBtn);
+    if (swiper.realIndex * 1 === 0 && prev === swiper.slides.length - 2 - 1) {
+      const nextIndexButton = (currentIndexBtn + 1) < serviceFeaturesButtons.length ? currentIndexBtn + 1 : 0;
+      serviceFeatureButtonClickHandler(serviceFeaturesButtons[nextIndexButton]);
+    } else {
+      prev = swiper.realIndex * 1;
+    }
   });
 
   const callback = (entry) => {
@@ -203,7 +203,6 @@ if (document.querySelector('.booking-button')) {
     bookingButton.addEventListener('click', (evt) => {
       evt.preventDefault();
       document.querySelector('.calendly-badge-content').click();
-      console.log('click');
     })
   });
 }
