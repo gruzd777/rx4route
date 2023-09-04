@@ -1,10 +1,10 @@
 .pagination {
   display: flex;
-  gap: 7px;
+  // gap: 7px;
   justify-content: center;
 
   @media(min-width: $desktop-middle) {
-    justify-content: right;
+    justify-content: center;
     position: absolute;
     bottom: -32px!important;
     left: unset!important;
