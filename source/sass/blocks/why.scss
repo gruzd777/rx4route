@@ -1,5 +1,5 @@
 .why {
-  padding: 64px 16px 0;
+  padding: 136px 16px 0;
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
@@ -9,13 +9,13 @@
 
 .why__title {
   width: 260px;
-  margin: 0 auto 16px;
+  margin: 0 0 16px 0;
 }
 
 .why__subtitle {
   max-width: 365px;
-  margin: 0 auto 32px;
-  text-align: center;
+  margin: 0 0 48px 0;
+  text-align: left;
 }
 
 
@@ -24,9 +24,9 @@
   margin: 0 0 16px 0;
 }
 
-.why__item-title--privacy {
-  display: none;
-}
+// .why__item-title--privacy {
+//   display: none;
+// }
 
 .why__description {
   max-width: 400px;
@@ -69,9 +69,9 @@
 .why__pic-time {
   display: inline-block;
   position: absolute;
-  left: -17px;
-  bottom: -53px;
-  width: 141px;
+  left: -27px;
+  bottom: -56px;
+  width: 151px;
   height: 157px;
 }
 
@@ -219,11 +219,11 @@
 }
 
 .why__img-hipa {
-  width: 169px;
-  height: 128px;
+  width: 185px;
+  height: 148px;
   position: absolute;
-  right: -10px;
-  bottom: -15px;
+  right: -37px;
+  bottom: -36px;
 }
 
 .why__img-dashboard {
@@ -291,7 +291,7 @@
 
   .why__title {
     width: 275px;
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
 
     &:nth-child(even) {
       margin-left: auto;
@@ -300,8 +300,9 @@
 
   .why__subtitle {
     max-width: 482px;
-    margin-bottom: 68px;
+    margin: 0 auto 68px;
     line-height: 130%;
+    text-align: center;
   }
 
   .why__description {
@@ -335,10 +336,10 @@
   }
 
   .why__pic-time {
-    width: 293px;
-    height: 336px;
+    width: 318px;
+    height: 327px;
     bottom: -136px;
-    left: -52px;
+    left: -73px;
   }
 
   .why__pic-widgets {
@@ -394,14 +395,14 @@
   }
 
   .why__img-hipa {
-    width: 245px;
-    height: 195px;
+    width: 296px;
+    height: 232px;
   }
 
   .why__widget-driver-out {
-    width: 325px;
+    width: 366px;
     position: absolute;
-    right: -74px;
+    right: -61px;
     top: 12px;
   }
 }
@@ -500,17 +501,27 @@
 
   .why__pic-driver {
     top: -4px;
-    right: -124px;
-    width: 271px;
-    height: 164px;
+    right: -111px;
+    width: 337px;
+    height: 196px;
   }
 
   .why__pic-time {
-    bottom: -158px;
-    left: -50px;
+    bottom: -152px;
+    left: -61px;
   }
 
   .why__communication {
     border-radius: 40px;
+  }
+
+  .why__img-hipa {
+    width: 386px;
+    height: 302px;
+    bottom: -85px;
+  }
+
+  .why__widget-driver-out {
+    right: -90px;
   }
 }
