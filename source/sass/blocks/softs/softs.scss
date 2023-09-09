@@ -332,7 +332,8 @@
   }
 
   .softs__block {
-    height: 226px;
+    height: 195px;
+    bottom: 43px;
   }
 
   .softs__block::after,
@@ -381,7 +382,7 @@
       animation: in 5s ease infinite;
 
       &::before {
-        left: -36px;
+        left: -34px;
       }
     }
 
@@ -404,7 +405,7 @@
     left: 875px;
 
     & .softs__block {
-      height: 223px;
+      height: 211px;
       bottom: -37px;
     }
 
@@ -415,8 +416,8 @@
       animation: in 8s ease infinite;
 
       &::before {
-        top: -4px;
-        left: -29px;
+        top: -1px;
+        left: -26px;
       }
     }
 
@@ -425,12 +426,12 @@
       right: calc(50% + 2px);
       animation: out 8s ease infinite;
       padding: 8px 27px 8px 37px;
-      background: #31d8b1 url(../img/softs/check.svg)no-repeat 18px center;
+      background: #31d8b1 url("../img/softs/check.svg")no-repeat 18px center;
       background-size: 12px 12px;
 
       &::before {
-        right: -24px;
-        top: 28px;
+        right: -26px;
+        top: 33px;
       }
     }
 
@@ -447,8 +448,8 @@
     left: 878px;
 
     & .softs__block {
-      height: 235px;
-      bottom: 59px;
+      height: 208px;
+      bottom: 71px;
     }
 
     & .softs__in {
@@ -459,7 +460,7 @@
 
       &::before {
         left: unset;
-        top: 11px;
+        top: 14px;
         right: -50px;
       }
     }
@@ -474,8 +475,8 @@
 
       &::before {
         right: unset;
-        top: 42px;
-        left: -10px;
+        top: 49px;
+        left: -8px;
       }
     }
 
@@ -492,8 +493,8 @@
     left: 543px;
 
     & .softs__block {
-      height: 228px;
-      bottom: 17px;
+      height: 193px;
+      bottom: -24px;
     }
 
     & .softs__in {
@@ -504,7 +505,7 @@
 
       &::before {
         left: unset;
-        right: -35px;
+        right: -31px;
         top: 33px;
       }
     }
@@ -514,7 +515,7 @@
       right: calc(50% + 25px);
       animation: out 3s ease infinite;
       padding: 8px 27px 8px 38px;
-      background: #31d8b1 url(../img/softs/check.svg)no-repeat 18px center;
+      background: #31d8b1 url("../img/softs/check.svg")no-repeat 18px center;
       background-size: 12px 12px;
 
       &::before {
@@ -538,8 +539,8 @@
     left: 190px;
 
     & .softs__block {
-      height: 228px;
-      bottom: -40px;
+      height: 204px;
+      bottom: -55px;
     }
 
     & .softs__in {
@@ -550,7 +551,7 @@
 
       &::before {
         left: unset;
-        right: -34px;
+        right: -25px;
         top: 46px;
       }
     }
@@ -565,7 +566,7 @@
 
       &::before {
         right: unset;
-        left: -27px;
+        left: -31px;
         top: 10px;
       }
     }
@@ -583,8 +584,8 @@
     left: 192px;
 
     & .softs__block {
-      height: 228px;
-      bottom: 64px;
+      height: 204px;
+      bottom: 67px;
     }
 
     & .softs__in {
@@ -595,7 +596,7 @@
 
       &::before {
         top: 49px;
-        left: -35px;
+        left: -30px;
       }
     }
 
@@ -608,8 +609,8 @@
       background-size: 12px 12px;
 
       &::before {
-        top: 2px;
-        right: -14px;
+        top: 1px;
+        right: -23px;
       }
     }
 
