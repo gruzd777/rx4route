@@ -246,23 +246,89 @@
 
     &::before {
       content: "";
-      height: 228px;
+      height: 192px;
       width: 1px;
       border-left: 2px solid #8871F6;
       position: absolute;
-      bottom: 0;
-      left: calc(50% + 8px);
+      bottom: 43px;
+      left: calc(50% + 10px);
     }
 
     &::after {
       content: "";
-      height: 228px;
+      height: 192px;
       width: 1px;
       border-left: 2px solid #31D8B1;
       position: absolute;
-      bottom: 0;
+      bottom: 43px;
       left: calc(50% - 12px);
     }
+  }
+
+  .softs__item--primerx::before,
+  .softs__item--primerx::after {
+    bottom: -42px;
+  }
+
+  .softs__item--suiterx::before,
+  .softs__item--suiterx::after {
+    height: 211px;
+    bottom: -7px;
+  }
+
+  .softs__item--suiterx::before {
+    left: calc(50% + 14px);
+  }
+
+  .softs__item--suiterx::after {
+    left: calc(50% - 9px);
+  }
+
+
+
+  .softs__item--datascan::before,
+  .softs__item--datascan::after {
+    height: 211px;
+    bottom: 7px;
+    left: calc(50% + 12px);
+  }
+
+  .softs__item--datascan::before {
+    left: calc(50% + 13px);
+  }
+
+  .softs__item--datascan::after {
+    left: calc(50% - 10px);
+  }
+
+  .softs__item--pksoftware::before,
+  .softs__item--pksoftware::after {
+    height: 211px;
+    bottom: 7px;
+    left: calc(50% + 12px);
+  }
+
+  .softs__item--pksoftware::before {
+    left: calc(50% + 13px);
+  }
+
+  .softs__item--pksoftware::after {
+    left: calc(50% - 10px);
+  }
+
+  .softs__item--pioneerrx::before,
+  .softs__item--pioneerrx::after {
+    height: 211px;
+    bottom: -13px;
+    left: calc(50% + 12px);
+  }
+
+  .softs__item--pioneerrx::before {
+    left: calc(50% + 13px);
+  }
+
+  .softs__item--pioneerrx::after {
+    left: calc(50% - 10px);
   }
 
   .softs__block {
@@ -333,7 +399,7 @@
   }
 
   .softs__item--datascan {
-    transform: rotate(61deg);
+    transform: rotate(63deg);
     top: 75px;
     left: 875px;
 
@@ -343,7 +409,7 @@
     }
 
     & .softs__in {
-      transform: rotate(-61deg);
+      transform: rotate(-63deg);
       left: calc(50% + 17px);
       margin-top: -118px;
       animation: in 8s ease infinite;
@@ -355,7 +421,7 @@
     }
 
     & .softs__out {
-      transform: rotate(-61deg);
+      transform: rotate(-63deg);
       right: calc(50% + 2px);
       animation: out 8s ease infinite;
       padding: 8px 27px 8px 37px;
@@ -369,15 +435,15 @@
     }
 
     & .softs__link {
-      transform: rotate(-61deg);
-      top: -5px;
-      left: -27px;
+      transform: rotate(-63deg);
+      top: 0px;
+      left: -24px;
     }
   }
 
   .softs__item--pksoftware {
-    transform: rotate(118deg);
-    top: 406px;
+    transform: rotate(116deg);
+    top: 376px;
     left: 878px;
 
     & .softs__block {
@@ -386,7 +452,7 @@
     }
 
     & .softs__in {
-      transform: rotate(-118deg);
+      transform: rotate(-116deg);
       left: calc(50% + 13px);
       margin-top: 116px;
       animation: in 7s ease infinite;
@@ -399,7 +465,7 @@
     }
 
     & .softs__out {
-      transform: rotate(-118deg);
+      transform: rotate(-116deg);
       right: calc(50% - 1px);
       animation: out 7s ease infinite;
       padding: 8px 27px 8px 39px;
@@ -414,9 +480,9 @@
     }
 
     & .softs__link {
-      transform: rotate(-118deg);
-      top: -7px;
-      left: -4px;
+      transform: rotate(-116deg);
+      top: 2px;
+      left: -11px;
     }
   }
 
@@ -459,7 +525,7 @@
 
     & .softs__link {
       transform: rotate(-180deg);
-      top: 37px;
+      top: 113px;
       left: -20px;
       width: 186px;
       height: 80px;
@@ -467,9 +533,9 @@
   }
 
   .softs__item--pioneerrx {
-    transform: rotate(-118deg);
-    top: 409px;
-    left: 193px;
+    transform: rotate(-117deg);
+    top: 388px;
+    left: 190px;
 
     & .softs__block {
       height: 228px;
@@ -505,14 +571,14 @@
     }
 
     & .softs__link {
-      transform: rotate(118deg);
-      top: 3px;
-      left: -42px;
+      transform: rotate(117deg);
+      top: 20px;
+      left: -27px;
     }
   }
 
   .softs__item--suiterx {
-    transform: rotate(-61deg);
+    transform: rotate(-64deg);
     top: 75px;
     left: 192px;
 
@@ -522,7 +588,7 @@
     }
 
     & .softs__in {
-      transform: rotate(61deg);
+      transform: rotate(64deg);
       left: calc(50% + 16px);
       margin-top: 100px;
       animation: in 9s ease infinite;
@@ -534,7 +600,7 @@
     }
 
     & .softs__out {
-      transform: rotate(61deg);
+      transform: rotate(64deg);
       right: calc(50% - 1px);
       animation: out 9s ease infinite;
       padding: 8px 27px 8px 37px;
@@ -548,8 +614,8 @@
     }
 
     & .softs__link {
-      transform: rotate(61deg);
-      top: -2px;
+      transform: rotate(64deg);
+      top: 17px;
       left: -9px;
     }
   }
