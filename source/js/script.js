@@ -58,8 +58,8 @@ const serviceFeatureButtonClickHandler = (element) => {
 
 if (serviceFeaturesButtonContainer) {
   serviceFeaturesButtonContainer.addEventListener('click', (e) => {
-    if (e.target.classList.contains('service-features__button')) {
-      serviceFeatureButtonClickHandler(e.target);
+    if (e.target.closest('.service-features__button')) {
+      serviceFeatureButtonClickHandler(e.target.closest('.service-features__button'));
     }
   });
 }
