@@ -48,7 +48,7 @@ const serviceFeatureButtonClickHandler = (element) => {
   swiperPhonesList[0].slideToLoop(0);
   swiperPhonesList[1].slideToLoop(0);
   const typeBackground = element.dataset.type;
-  
+
   if (typeBackground === 'smart') {
     serviceFeaturesSection.classList.add('service-features--smart');
   } else {
@@ -214,6 +214,7 @@ if (document.querySelector('.hoist')) {
         change.target.querySelectorAll('.hoisting__element').forEach((item) => {
           item.classList.remove('hoisting__element--not-visible');
           item.classList.remove('hoisting__element--not-visible-widgets');
+          item.classList.remove('hoisting__element--not-visible-100');
         });
       }
     });
@@ -235,7 +236,7 @@ if (document.querySelector('.hoisting-text')) {
     entry.forEach(change => {
       if (change.isIntersecting) {
         change.target.classList.remove('hoisting-text--start');
-
+        change.target.classList.remove('hoisting-text--main-start');
       }
     });
   }

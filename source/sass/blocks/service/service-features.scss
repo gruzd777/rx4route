@@ -37,7 +37,7 @@
   @media(min-width: $desktop-middle) {
     margin: 0 auto;
     max-width: 1200px;
-    padding: 41px 40px 63px;
+    padding: 41px 40px 53px;
     background: rgba(255, 255, 255, 0.6);
     border-radius: 41px;
     box-sizing: border-box;
@@ -151,6 +151,6 @@
   @media(min-width: $tablet) {}
 
   @media(min-width: $desktop-middle) {
-    width: 879px;
+    width: 864px;
   }
 }

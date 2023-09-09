@@ -14,19 +14,19 @@
 }
 
 .hoisting__element--pionerrx {
-  transition: all 2.0s ease-out;
+  transition: all 1.5s ease-out;
 }
 
 .hoisting__element--datascan {
-  transition: all 2.5s ease-out;
+  transition: all 1.6s ease-out;
 }
 
 .hoisting__element--suitrx {
-  transition: all 3.0s ease-out;
+  transition: all 1.7s ease-out;
 }
 
 .hoisting__element--pksoftware {
-  transition: all 3.5s ease-out;
+  transition: all 1.8s ease-out;
 }
 
 .hoisting__element--not-visible-widgets {
@@ -39,6 +39,11 @@
     opacity: 0;
 }
 
+.hoisting__element--not-visible-100 {
+  translate: 0 100px;
+  opacity: 0;
+}
+
 .hoisting-text {
     transition: all 1.5s;
     transform: translateY(0%);
@@ -49,6 +54,11 @@
 .hoisting-text--start {
     opacity: 0;
     transform: translateY(100%);
+}
+
+.hoisting-text--main-start {
+  opacity: 0;
+  transform: translateY(20%);
 }
 
 .push-right {}
