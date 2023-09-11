@@ -10,7 +10,7 @@
       </li>
       {{/each}}
     </ul>
-    <div class="simple-swiper swiper slider" data-text="{{texts}}">
+    <div class="simple-swiper swiper slider" data-text="{{texts}}" id="swiper-{{swiperId}}">
       <ul class="slider__container slider__pharmacies swiper-wrapper">
         {{#each screen}}
         <li class="slider__item slider-item swiper-slide">
@@ -37,7 +37,7 @@
       </li>
       {{/each}}
     </ul>
-    <div class="phone-slider__swiper phone-swiper" data-text="{{texts}}">
+    <div class="phone-slider__swiper phone-swiper" data-text="{{texts}}"  id="swiper-{{swiperId}}">
       <div class="phone-swiper__wrapper swiper-wrapper">
         {{#each screen}}
         <div class="swiper-slide phone-swiper__slide">
