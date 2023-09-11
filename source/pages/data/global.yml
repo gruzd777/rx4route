@@ -2,6 +2,7 @@ slider:
   -
     stype: simple
     texts: text-zero
+    swiperId: pharmacies
     screen:
       -
         description-title: Driver Management
@@ -29,6 +30,7 @@ slider:
         position: left-bottom
   -
     texts: text-first
+    swiperId: drivers
     screen:
       -
         description-title: Simplified Route Navigation
@@ -62,6 +64,7 @@ slider:
         position: left-bottom
   -
     texts: text-second
+    swiperId: patients
     screen:
       -
         description-title: Customer Communication

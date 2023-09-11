@@ -38,6 +38,12 @@ const setActive = (element, classNameActive, classNameBase) => {
 let prev = 0;
 const serviceFeatureButtonClickHandler = (element) => {
   prev = 0;
+
+  const title = element.dataset.title;
+  console.log(document.querySelector(`#swiper-${title}`).swiper);
+
+  document.querySelector(`#swiper-${title}`).swiper.update();
+
   setActive(element, 'active', 'service-features__button');
   setActive(
     Array.from(serviceFeaturesScreens)[Array.from(serviceFeaturesButtons).indexOf(element)],
@@ -71,8 +77,8 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     slidesPerView: 1,
     loop: true,
     initialSlide: 0,
-    observer: true,
-    observeParents: true,
+    // observer: true,
+    // observeParents: true,
     resizeObserver: true,
     watchActiveIndex: true,
     pagination: {
@@ -98,8 +104,8 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
       el: '.swiper__pagination',
       clickable: true
     },
-    observer: true,
-    observeParents: true,
+    // observer: true,
+    // observeParents: true,
     resizeObserver: true,
     keyboard: {
       enabled: true,
