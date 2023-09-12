@@ -40,7 +40,7 @@ const serviceFeatureButtonClickHandler = (element) => {
   prev = 0;
 
   const title = element.dataset.title;
-  console.log(document.querySelector(`#swiper-${title}`).swiper);
+  // console.log(document.querySelector(`#swiper-${title}`).swiper);
 
   document.querySelector(`#swiper-${title}`).swiper.update();
 
