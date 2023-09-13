@@ -5,27 +5,27 @@ slider:
     swiperId: pharmacies
     screen:
       -
-        description-title: Driver Management
-        description-text: Easily manage your driver capacity and schedules through our intuitive platform. Assign deliveries based on driver availability and proximity, ensuring optimized resource allocation and timely prescription deliveries.
-        img-mob: slide-features/pharmacies/driver-management
+        description-title: Real-Time Innovation
+        description-text: Unlock the power of the future with Rx4Route's real-time capabilities. Our revolutionary technology puts you in the driver's seat, providing an unprecedented level of control and transparency.
+        img-mob: slide-features/pharmacies/real-time-innovation@2x
         background: sky
         position: left-bottom
       -
         description-title: Seamless Integration
         description-text: Connect Rx4Route with your existing pharmacy Information and Prescription Systems (IPS) effortlessly, without disrupting your workflow. Our software integrates smoothly, ensuring a hassle-free transition.
-        img-mob: slide-features/pharmacies/seamless-integration
+        img-mob: slide-features/pharmacies/seamless-integration@2x
         background: pistachios
         position: right-bottom
       -
         description-title: Route Optimization
         description-text: Maximize efficiency by leveraging our advanced route optimization algorithms. Rx4Route calculates the most efficient delivery routes for your drivers, reducing travel time and costs while improving overall delivery speed.
-        img-mob: slide-features/pharmacies/route-optimization
+        img-mob: slide-features/pharmacies/route-optimization-w-line@2x
         background: violet
         position: left-bottom
       -
         description-title: Driver Management
         description-text: Easily manage your driver capacity and schedules through our intuitive platform. Assign deliveries based on driver availability and proximity, ensuring optimized resource allocation and timely prescription deliveries.
-        img-mob: slide-features/pharmacies/driver-management-1
+        img-mob: slide-features/pharmacies/last@2x
         background: pistachios
         position: left-bottom
   -

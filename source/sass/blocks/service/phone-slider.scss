@@ -6,6 +6,7 @@
     overflow: visible;
     position: relative;
     border-radius: 30px;
+    margin: 0;
     background: rgba(185, 248, 236, 0.3);
 
     &--violet {
@@ -18,7 +19,7 @@
 
     &--sky {
       background-color: rgba(216, 235, 253, 0.3);
-    }    
+    }
   }
 }
 
