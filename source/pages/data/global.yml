@@ -25,7 +25,7 @@ slider:
       -
         description-title: Driver Management
         description-text: Easily manage your driver capacity and schedules through our intuitive platform. Assign deliveries based on driver availability and proximity, ensuring optimized resource allocation and timely prescription deliveries.
-        img-mob: slide-features/pharmacies/last@2x
+        img-mob: slide-features/pharmacies/driver-management-1@2x
         background: pistachios
         position: left-bottom
   -
