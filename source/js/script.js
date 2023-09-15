@@ -150,7 +150,7 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
   swiperPhonesList.forEach((item) => {
 
     item.on('slideChange', () => {
-
+      document.body.classList.remove('body--slider-autoplay-start');
 
       const texts = document.querySelectorAll(`.${item.el.dataset.text} .phone-texts__item`);
       if (document.querySelector(`.${item.el.dataset.text} .phone-texts__item--active`)) {
@@ -188,8 +188,15 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     const activeBtn = document.querySelector('.service-features__button.active');
     const currentIndexBtn = Array.from(serviceFeaturesButtons).indexOf(activeBtn);
     if (swiper.realIndex * 1 === 0 && prev === swiper.slides.length - 2 - 1) {
-      const nextIndexButton = (currentIndexBtn + 1) < serviceFeaturesButtons.length ? currentIndexBtn + 1 : 0;
-      serviceFeatureButtonClickHandler(serviceFeaturesButtons[nextIndexButton]);
+      if (document.body.classList.contains('body--slider-autoplay-start')) {
+        document.body.classList.remove('body--slider-autoplay-start');
+        swiper.autoplay.stop();
+        prev = swiper.realIndex * 1;
+      } else {
+        const nextIndexButton = (currentIndexBtn + 1) < serviceFeaturesButtons.length ? currentIndexBtn + 1 : 0;
+        serviceFeatureButtonClickHandler(serviceFeaturesButtons[nextIndexButton]);
+      }
+
     } else {
       prev = swiper.realIndex * 1;
     }
@@ -204,6 +211,7 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
       swiper.autoplay.start();
 
       document.body.classList.add('body--slider-activate');
+      document.body.classList.add('body--slider-autoplay-start');
       x = window.scrollX;
       y = window.scrollY;
     }
