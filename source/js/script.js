@@ -36,13 +36,62 @@ const setActive = (element, classNameActive, classNameBase) => {
   element.classList.add(classNameActive)
 };
 let prev = 0;
+
+const handler = (e) => {
+  console.log(e);
+  console.log('to zero!!!');
+    swiper.slideToLoop(0, 0, false);
+  swiperDrivers.slideToLoop(0, 0, false);
+  swiperPatients.slideToLoop(0, 0, false);
+};
+
 const serviceFeatureButtonClickHandler = (element) => {
   prev = 0;
 
   const title = element.dataset.title;
-  // console.log(document.querySelector(`#swiper-${title}`).swiper);
+  console.log('!!!', document.querySelector(`#swiper-${title}`).swiper);
 
-  document.querySelector(`#swiper-${title}`).swiper.update();
+  // swiper.detachEvents();
+  // swiperDrivers.detachEvents();
+  // swiperPatients.detachEvents();
+
+  // swiper.destroy(false, false);
+// swiper.init();
+
+// swiperDrivers.destroy(false, false);
+// swiperDrivers.init();
+
+// swiperPatients.destroy(false, false);
+// swiperPatients.init();
+
+  // swiper.slideToLoop(0);
+  // swiperDrivers.slideToLoop(0);
+  // swiperPatients.slideToLoop(0);
+
+    swiper.disable()
+  swiperDrivers.disable()
+  swiperPatients.disable()
+
+  // swiperDrivers.updateSlides()
+  // swiperDrivers.updateSlidesClasses()
+
+  // swiperDrivers.emit('init')
+
+  document.querySelector(`#swiper-${title}`).swiper.enable()
+
+  document.querySelector(`#swiper-${title}`).swiper.slideToLoop(0, 0, false);
+ 
+
+
+  
+  document.querySelector(`#swiper-${title}`).swiper.updateSlides();
+  document.querySelector(`#swiper-${title}`).swiper.emit('init')
+
+
+  console.log("swiper.realIndex ", swiper.realIndex)
+  console.log("swiperDrivers.realIndex ",swiperDrivers.realIndex)
+  console.log("swiperPatients.realIndex ",swiperPatients.realIndex)
+
 
   setActive(element, 'active', 'service-features__button');
   setActive(
@@ -50,10 +99,10 @@ const serviceFeatureButtonClickHandler = (element) => {
     'service-slider__item--active',
     'service-slider__item'
   );
+  document.querySelector(`#swiper-${title}`).swiper.attachEvents();
+  document.querySelector(`#swiper-${title}`).swiper.update();
 
-  swiper.slideToLoop(0);
-  swiperPhonesList[0].slideToLoop(0);
-  swiperPhonesList[1].slideToLoop(0);
+
   const typeBackground = element.dataset.type;
 
   if (typeBackground === 'smart') {
@@ -71,6 +120,21 @@ if (serviceFeaturesButtonContainer) {
   });
 }
 
+document.addEventListener('wheel', (e) => {
+  console.log('wheel');
+  if (document.body.classList.contains('body--slider-activate')) {
+    e.preventDefault();
+  }
+
+}, { passive: false });
+
+document.addEventListener('scroll', (e) => {
+  console.log('scroll');
+  if (document.body.classList.contains('body--slider-activate')) {
+    e.preventDefault();
+  }
+})
+
 if (document.querySelector('.phone-swiper') || document.querySelector('.simple-swiper')) {
 
   var swiper = new Swiper('.simple-swiper', {
@@ -82,7 +146,7 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     resizeObserver: true,
     watchActiveIndex: true,
     pagination: {
-      el: '.swiper__pagination',
+      el: '.pagination-pharmacies',
       clickable: true
     },
     keyboard: {
@@ -92,20 +156,24 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
     mousewheel: {
       releaseOnEdges: true,
     },
+    // onAny(eventName, ...args) {
+    //   console.log('Event: ', eventName);
+    //   console.log('Event data: ', args);
+    // }
   });
 
-  var swiperPhonesList = new Swiper('.phone-swiper', {
+  var swiperDrivers = new Swiper('#swiper-drivers', {
     centeredSlides: true,
     initialSlide: 0,
     loop: true,
     speed: 1000,
     spaceBetween: 20,
     pagination: {
-      el: '.swiper__pagination',
+      el: '.pagination-drivers',
       clickable: true
     },
-    // observer: true,
-    // observeParents: true,
+    observer: true,
+    observeParents: true,
     resizeObserver: true,
     keyboard: {
       enabled: true,
@@ -115,6 +183,10 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
       releaseOnEdges: true,
     },
     slideToClickedSlide: true,
+    // onAny(eventName, ...args) {
+    //   console.log('Event: ', eventName);
+    //   console.log('Event data: ', args);
+    // },
     breakpoints: {
 
       10: {
@@ -131,8 +203,51 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
       },
     },
   });
-  let x;
-  let y;
+
+  var swiperPatients = new Swiper('#swiper-patients', {
+    centeredSlides: true,
+    initialSlide: 0,
+    loop: true,
+    speed: 1000,
+    spaceBetween: 20,
+    pagination: {
+      el: '.pagination-patients',
+      clickable: true
+    },
+    // observer: true,
+    // observeParents: true,
+    resizeObserver: true,
+    keyboard: {
+      enabled: true,
+      // onlyInViewport: true
+    },
+    mousewheel: {
+      releaseOnEdges: true,
+    },
+    slideToClickedSlide: true,
+    // onAny(eventName, ...args) {
+    //   console.log('Event: ', eventName);
+    //   console.log('Event data: ', args);
+    // },
+    breakpoints: {
+
+      10: {
+        slidesPerView: 2.4,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      1080: {
+        slidesPerView: 3,
+      },
+      1280: {
+        slidesPerView: 2.9,
+      },
+    },
+  });
+
+  // let x;
+  // let y;
   // window.addEventListener('scroll', (evt) => {
   //   if(document.body.classList.contains('body--slider-activate') && y){
 
@@ -147,30 +262,80 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
   phoneTextList.forEach((item) => {
     item.querySelector('.phone-texts__item').classList.add('phone-texts__item--active');
   });
-  swiperPhonesList.forEach((item) => {
 
-    item.on('slideChange', () => {
-      document.body.classList.remove('body--slider-autoplay-start');
 
-      const texts = document.querySelectorAll(`.${item.el.dataset.text} .phone-texts__item`);
-      if (document.querySelector(`.${item.el.dataset.text} .phone-texts__item--active`)) {
-        document.querySelector(`.${item.el.dataset.text} .phone-texts__item--active`).classList.remove('phone-texts__item--active');
-      }
-      Array.from(texts)[item.realIndex].classList.add('phone-texts__item--active');
-      const color = Array.from(texts)[item.realIndex].dataset.color;
-      item.el.closest('.phone-slider').classList.remove('phone-slider--violet', 'phone-slider--pistachios', 'phone-slider--sky');
-      item.el.closest('.phone-slider').classList.add(`phone-slider--${color}`);
 
-      const activeBtn = document.querySelector('.service-features__button.active');
-      const currentIndexBtn = Array.from(serviceFeaturesButtons).indexOf(activeBtn);
-      if (item.realIndex * 1 === 0 && prev === item.slides.length - 6 - 1) {
-        const nextIndexButton = (currentIndexBtn + 1) < serviceFeaturesButtons.length ? currentIndexBtn + 1 : 0;
-        serviceFeatureButtonClickHandler(serviceFeaturesButtons[nextIndexButton], item);
-      } else {
-        prev = item.realIndex * 1;
-      }
-    });
+  swiperDrivers.on('slideChange', () => {
+    document.body.classList.remove('body--slider-autoplay-start');
+
+    const texts = document.querySelectorAll(`.${swiperDrivers.el.dataset.text} .phone-texts__item`);
+    if (document.querySelector(`.${swiperDrivers.el.dataset.text} .phone-texts__item--active`)) {
+      document.querySelector(`.${swiperDrivers.el.dataset.text} .phone-texts__item--active`).classList.remove('phone-texts__item--active');
+    }
+    Array.from(texts)[swiperDrivers.realIndex].classList.add('phone-texts__item--active');
+    const color = Array.from(texts)[swiperDrivers.realIndex].dataset.color;
+    swiperDrivers.el.closest('.phone-slider').classList.remove('phone-slider--violet', 'phone-slider--pistachios', 'phone-slider--sky');
+    swiperDrivers.el.closest('.phone-slider').classList.add(`phone-slider--${color}`);
+
+    const activeBtn = document.querySelector('.service-features__button.active');
+    const currentIndexBtn = Array.from(serviceFeaturesButtons).indexOf(activeBtn);
+
+    console.log("swiper.realIndex ", swiper.realIndex)
+    console.log("swiperDrivers.realIndex ",swiperDrivers.realIndex)
+    console.log("swiperPatients.realIndex ",swiperPatients.realIndex)
+
+    if (swiperDrivers.realIndex * 1 === 0 && prev === swiperDrivers.slides.length - 6 - 1) {
+      const nextIndexButton = (currentIndexBtn + 1) < serviceFeaturesButtons.length ? currentIndexBtn + 1 : 0;
+
+      swiper.detachEvents();
+      swiperDrivers.detachEvents();
+      swiperPatients.detachEvents();
+
+      console.log('now!!!')
+      swiperDrivers.once('scroll', handler)
+      serviceFeatureButtonClickHandler(serviceFeaturesButtons[nextIndexButton]);
+      
+
+    } else {
+      prev = swiperDrivers.realIndex * 1;
+    }
   });
+
+  swiperPatients.on('slideChange', () => {
+    document.body.classList.remove('body--slider-autoplay-start');
+
+    const texts = document.querySelectorAll(`.${swiperPatients.el.dataset.text} .phone-texts__item`);
+    if (document.querySelector(`.${swiperPatients.el.dataset.text} .phone-texts__item--active`)) {
+      document.querySelector(`.${swiperPatients.el.dataset.text} .phone-texts__item--active`).classList.remove('phone-texts__item--active');
+    }
+    Array.from(texts)[swiperPatients.realIndex].classList.add('phone-texts__item--active');
+    const color = Array.from(texts)[swiperPatients.realIndex].dataset.color;
+    swiperPatients.el.closest('.phone-slider').classList.remove('phone-slider--violet', 'phone-slider--pistachios', 'phone-slider--sky');
+    swiperPatients.el.closest('.phone-slider').classList.add(`phone-slider--${color}`);
+
+    const activeBtn = document.querySelector('.service-features__button.active');
+    const currentIndexBtn = Array.from(serviceFeaturesButtons).indexOf(activeBtn);
+
+    console.log("swiper.realIndex ", swiper.realIndex)
+    console.log("swiperDrivers.realIndex ",swiperDrivers.realIndex)
+    console.log("swiperPatients.realIndex ",swiperPatients.realIndex)
+
+    if (swiperPatients.realIndex * 1 === 0 && prev === swiperPatients.slides.length - 6 - 1) {
+      const nextIndexButton = (currentIndexBtn + 1) < serviceFeaturesButtons.length ? currentIndexBtn + 1 : 0;
+
+      swiper.detachEvents();
+      swiperDrivers.detachEvents();
+      swiperPatients.detachEvents();
+
+      console.log('now!!!')
+      swiperPatients.once('scroll', handler)
+      serviceFeatureButtonClickHandler(serviceFeaturesButtons[nextIndexButton]);
+      
+    } else {
+      prev = swiperPatients.realIndex * 1;
+    }
+  });
+
 
   const simpleTextList = document.querySelectorAll('.simple-texts');
   simpleTextList.forEach((item) => {
@@ -187,6 +352,11 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
 
     const activeBtn = document.querySelector('.service-features__button.active');
     const currentIndexBtn = Array.from(serviceFeaturesButtons).indexOf(activeBtn);
+    
+    console.log("swiper.realIndex ", swiper.realIndex)
+    console.log("swiperDrivers.realIndex ",swiperDrivers.realIndex)
+    console.log("swiperPatients.realIndex ",swiperPatients.realIndex)
+
     if (swiper.realIndex * 1 === 0 && prev === swiper.slides.length - 2 - 1) {
       if (document.body.classList.contains('body--slider-autoplay-start')) {
         document.body.classList.remove('body--slider-autoplay-start');
@@ -194,7 +364,16 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
         prev = swiper.realIndex * 1;
       } else {
         const nextIndexButton = (currentIndexBtn + 1) < serviceFeaturesButtons.length ? currentIndexBtn + 1 : 0;
+
+
+        swiper.detachEvents();
+        swiperDrivers.detachEvents();
+        swiperPatients.detachEvents();
+  
+        console.log('now!!! swiper => drivers prev = ', prev)
+        swiper.once('scroll', handler)
         serviceFeatureButtonClickHandler(serviceFeaturesButtons[nextIndexButton]);
+        
       }
 
     } else {
@@ -212,8 +391,6 @@ if (document.querySelector('.phone-swiper') || document.querySelector('.simple-s
 
       document.body.classList.add('body--slider-activate');
       document.body.classList.add('body--slider-autoplay-start');
-      x = window.scrollX;
-      y = window.scrollY;
     }
   }
   const options = {
