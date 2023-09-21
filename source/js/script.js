@@ -49,48 +49,17 @@ const serviceFeatureButtonClickHandler = (element) => {
   prev = 0;
 
   const title = element.dataset.title;
-  console.log('!!!', document.querySelector(`#swiper-${title}`).swiper);
-
-  // swiper.detachEvents();
-  // swiperDrivers.detachEvents();
-  // swiperPatients.detachEvents();
-
-  // swiper.destroy(false, false);
-// swiper.init();
-
-// swiperDrivers.destroy(false, false);
-// swiperDrivers.init();
-
-// swiperPatients.destroy(false, false);
-// swiperPatients.init();
-
-  // swiper.slideToLoop(0);
-  // swiperDrivers.slideToLoop(0);
-  // swiperPatients.slideToLoop(0);
 
     swiper.disable()
   swiperDrivers.disable()
   swiperPatients.disable()
 
-  // swiperDrivers.updateSlides()
-  // swiperDrivers.updateSlidesClasses()
-
-  // swiperDrivers.emit('init')
-
   document.querySelector(`#swiper-${title}`).swiper.enable()
 
   document.querySelector(`#swiper-${title}`).swiper.slideToLoop(0, 0, false);
  
-
-
-  
   document.querySelector(`#swiper-${title}`).swiper.updateSlides();
-  document.querySelector(`#swiper-${title}`).swiper.emit('init')
-
-
-  console.log("swiper.realIndex ", swiper.realIndex)
-  console.log("swiperDrivers.realIndex ",swiperDrivers.realIndex)
-  console.log("swiperPatients.realIndex ",swiperPatients.realIndex)
+  document.querySelector(`#swiper-${title}`).swiper.emit('init');
 
 
   setActive(element, 'active', 'service-features__button');
@@ -120,20 +89,20 @@ if (serviceFeaturesButtonContainer) {
   });
 }
 
-document.addEventListener('wheel', (e) => {
-  console.log('wheel');
-  if (document.body.classList.contains('body--slider-activate')) {
-    e.preventDefault();
-  }
+// document.addEventListener('wheel', (e) => {
+//   console.log('wheel');
+//   if (document.body.classList.contains('body--slider-activate')) {
+//     e.preventDefault();
+//   }
 
-}, { passive: false });
+// }, { passive: false });
 
-document.addEventListener('scroll', (e) => {
-  console.log('scroll');
-  if (document.body.classList.contains('body--slider-activate')) {
-    e.preventDefault();
-  }
-})
+// document.addEventListener('scroll', (e) => {
+//   console.log('scroll');
+//   if (document.body.classList.contains('body--slider-activate')) {
+//     e.preventDefault();
+//   }
+// });
 
 if (document.querySelector('.phone-swiper') || document.querySelector('.simple-swiper')) {
 
